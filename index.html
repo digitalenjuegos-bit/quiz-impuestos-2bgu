@@ -227,8 +227,38 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
 .toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-90px);background:var(--red);color:#fff;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;box-shadow:0 10px 30px -8px rgba(0,0,0,.35);z-index:400;transition:transform .35s cubic-bezier(.2,.7,.2,1);max-width:92%;text-align:center}
 .toast.show{transform:translateX(-50%) translateY(0)}
 
+/* ═══ RANKING (estudiantes y panel docente) ═══ */
+.rank-section{margin:24px 0 0;text-align:left;border:1px solid var(--hairline);border-radius:16px;background:rgba(255,255,255,.5);overflow:hidden}
+.rank-toggle{width:100%;display:flex;align-items:center;gap:10px;background:none;border:none;padding:16px 20px;cursor:pointer;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:.08em;text-align:left}
+.rank-toggle:hover{background:rgba(27,42,91,.04)}
+.rank-toggle .rank-hint{margin-left:auto;display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--label-gray);text-transform:none;letter-spacing:0}
+.rank-body{padding:2px 20px 18px;border-top:1px solid var(--hairline)}
+.rank-sub{font-size:11px;font-weight:600;color:var(--label-gray);text-transform:uppercase;letter-spacing:.08em;margin:14px 0 4px}
+.rank-list{display:flex;flex-direction:column}
+.rank-row{display:grid;grid-template-columns:46px 1fr auto;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--hairline)}
+.rank-row:last-child{border-bottom:none}
+.rank-pos{display:inline-flex;align-items:center;gap:6px;font-family:'Fraunces',serif;font-weight:700;font-size:16px;color:var(--navy)}
+.rank-name{font-size:13px;color:var(--ink-soft);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank-grade{font-family:'Fraunces',serif;font-weight:700;font-size:15px;color:var(--navy);white-space:nowrap}
+.medal{font-size:16px}
+.medal.gold{color:var(--gold-brand)}
+.medal.silver{color:#9AA3B2}
+.medal.bronze{color:#A9713B}
+.rank-row.you{background:rgba(30,123,79,.08);border-radius:8px;padding-left:12px;padding-right:12px;border-bottom-color:transparent}
+.rank-you-tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--green-brand);color:#fff;border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:middle}
+.rank-mine{margin-top:14px;padding:10px 14px;background:rgba(30,123,79,.08);border:1px solid rgba(30,123,79,.2);border-radius:10px;font-size:13px;color:var(--navy);font-weight:600}
+.rank-empty{font-size:13px;color:var(--muted);padding:12px 0}
+.teacher-rank-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.teacher-rank-head h3{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--navy)}
+.btn-back-table{padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--navy);font-family:'Outfit',sans-serif;font-weight:600;font-size:13px;cursor:pointer}
+.btn-back-table:hover{background:rgba(27,42,91,.06)}
+.teacher-rank-row{display:grid;grid-template-columns:46px 1fr auto 64px;align-items:center;gap:12px;padding:10px 12px;border-bottom:1px solid var(--border)}
+.teacher-rank-row:last-child{border-bottom:none}
+.teacher-rank-row:hover{background:rgba(31,74,61,.03)}
+.teacher-rank-date{font-size:12px;color:var(--muted);white-space:nowrap}
+
 @media(max-width:720px){.container{padding:20px 14px 60px}.welcome-card,.results-card{padding:32px 22px}.welcome-meta,.stats-grid{grid-template-columns:1fr;gap:8px}.question-card{padding:26px 22px}.question-text{font-size:19px}.quiz-header{flex-direction:column;align-items:flex-start}.brand-right{display:none}.actions{flex-direction:column-reverse;gap:10px}.actions .btn{width:100%}}
-@media print{body{background:#fff}body::before{display:none}.brand,.welcome-screen,.quiz-screen,.results-actions,.teacher-panel-opener{display:none !important}.results-card{box-shadow:none;border:none;padding:24px 20px}.container{max-width:100%;padding:0}.score-circle svg circle{fill:var(--green-brand) !important}.score-circle .track{fill:var(--cream) !important}.score-value{color:var(--navy) !important;font-weight:700 !important}.review-item{break-inside:avoid;page-break-inside:avoid}.review-box{border:none;padding:0}.meta-grid{border:1px solid var(--hairline)}.dist-cell{border:1px solid var(--hairline)}body{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}}
+@media print{body{background:#fff}body::before{display:none}.brand,.welcome-screen,.quiz-screen,.results-actions,.rank-section,.teacher-panel-opener{display:none !important}.results-card{box-shadow:none;border:none;padding:24px 20px}.container{max-width:100%;padding:0}.score-circle svg circle{fill:var(--green-brand) !important}.score-circle .track{fill:var(--cream) !important}.score-value{color:var(--navy) !important;font-weight:700 !important}.review-item{break-inside:avoid;page-break-inside:avoid}.review-box{border:none;padding:0}.meta-grid{border:1px solid var(--hairline)}.dist-cell{border:1px solid var(--hairline)}body{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}}
 </style>
 </head>
 <body>
@@ -357,6 +387,15 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
     </div>
   </div>
 
+  <!-- Ranking de la clase (se carga al guardar el resultado) -->
+  <div class="rank-section" id="classRanking" style="display:none">
+    <button type="button" class="rank-toggle" id="classRankingToggle" onclick="toggleClassRanking()" aria-expanded="false" aria-controls="classRankingBody">
+      <i class="fa-solid fa-trophy"></i> Ranking de la clase
+      <span class="rank-hint" id="classRankingHint"><i class="fa-solid fa-plus"></i> Ver</span>
+    </button>
+    <div class="rank-body" id="classRankingBody" style="display:none"></div>
+  </div>
+
   <div class="results-actions">
     <button class="btn btn-ghost" onclick="printPDF()"><i class="fa-solid fa-print"></i> Imprimir / PDF</button>
     <button class="btn btn-ghost" id="btn-review" onclick="toggleReview()"><i class="fa-solid fa-magnifying-glass"></i> Ver retroalimentación</button>
@@ -381,6 +420,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
     <div class="teacher-controls">
       <button class="btn btn-ghost" onclick="loadTeacher()"><i class="fa-solid fa-rotate"></i> Actualizar</button>
       <button class="btn btn-ghost btn-excel" onclick="exportExcel()"><i class="fa-solid fa-file-excel"></i> Excel</button>
+      <button class="btn btn-ghost" onclick="loadTeacherRanking()"><i class="fa-solid fa-ranking-star"></i> Ranking</button>
       <button class="btn-del-all" onclick="clearAllGrades()"><i class="fa-solid fa-trash"></i> Borrar todo</button>
       <button class="btn btn-ghost" onclick="toggleQuizStatus()"><i class="fa-solid fa-lock-open" id="statusIcon"></i> <span id="statusText">Abrir quiz</span></button>
     </div>
@@ -1839,6 +1879,7 @@ function finishQuiz(){
   function saveOK(){
     localStorage.setItem(localMarkerKey, JSON.stringify(payload)); // marca SIEMPRE: un intento por dispositivo
     saveStatusEl.innerHTML='<i class="fa-solid fa-circle-check"></i> Resultado guardado correctamente.';
+    loadClassRanking();
   }
   if(!SUPABASE_CONFIGURED){
     saveLocalFallback();
@@ -2521,6 +2562,147 @@ function generateStudentPDF(row){
 
   doc.save('Informe_Impuestos_2BGU_'+name.trim().replace(/\s+/g,'_')+'.pdf');
   } catch(e){ console.error('generateStudentPDF error:',e);alertModal('Error al generar PDF: '+e.message); }
+}
+
+/* ═══════ RANKING EN VIVO (top 10 por nota) ═══════ */
+const RANK_TOP_PATH = 'quiz_results?exam_id=eq.'+EXAM_ID+'&select=student_name,student_lastname,grade,total,timestamp&order=grade.desc,timestamp.asc&limit=10';
+const RANK_ALL_PATH = 'quiz_results?exam_id=eq.'+EXAM_ID+'&select=student_name,student_lastname,grade&order=grade.desc,timestamp.asc';
+
+function fetchTopRanking(){
+  return supabaseGet(RANK_TOP_PATH).then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); });
+}
+
+function rankMedal(pos){
+  if(pos===1) return '<i class="fa-solid fa-medal medal gold"></i>';
+  if(pos===2) return '<i class="fa-solid fa-medal medal silver"></i>';
+  if(pos===3) return '<i class="fa-solid fa-medal medal bronze"></i>';
+  return '';
+}
+
+function rankFullName(r){
+  const n = String(r.student_name||r.studentName||r.name||'').trim();
+  const l = String(r.student_lastname||r.studentLastname||r.lastname||'').trim();
+  return (l && n) ? (l+', '+n) : (n || l);
+}
+
+/* Compara la fila remota con el estudiante actual, sin distinguir mayúsculas
+   ni el orden de apellido/nombre en los dos formatos que usa la app. */
+function rankIsMe(r){
+  const norm = s => String(s||'').toUpperCase().replace(/\s+/g,' ').trim();
+  const n = norm(r.student_name||r.studentName||r.name||'');
+  const l = norm(r.student_lastname||r.studentLastname||r.lastname||'');
+  const keys = [norm(l+', '+n), norm(n+' '+l)];
+  const myA = norm((STATE.studentLastname||'')+', '+(STATE.studentName||''));
+  const myB = norm((STATE.studentName||'')+' '+(STATE.studentLastname||''));
+  if(!myA && !myB) return false;
+  return keys.indexOf(myA) !== -1 || keys.indexOf(myB) !== -1;
+}
+
+function rankShortDate(ts){
+  if(!ts) return '-';
+  const d = new Date(ts);
+  if(isNaN(d.getTime())) return '-';
+  return d.toLocaleDateString('es-EC', {day:'2-digit', month:'2-digit'});
+}
+
+/* ── Vista del estudiante (pantalla de resultados) ── */
+let classRankingOpen = false;
+
+function toggleClassRanking(){ setClassRankingOpen(!classRankingOpen); }
+
+function setClassRankingOpen(open){
+  classRankingOpen = !!open;
+  const body = document.getElementById('classRankingBody');
+  const hint = document.getElementById('classRankingHint');
+  const btn = document.getElementById('classRankingToggle');
+  if(body) body.style.display = classRankingOpen ? 'block' : 'none';
+  if(hint) hint.innerHTML = classRankingOpen ? '<i class="fa-solid fa-minus"></i> Ocultar' : '<i class="fa-solid fa-plus"></i> Ver';
+  if(btn) btn.setAttribute('aria-expanded', classRankingOpen ? 'true' : 'false');
+}
+
+function loadClassRanking(){
+  const section = document.getElementById('classRanking');
+  if(!section) return;
+  if(!SUPABASE_CONFIGURED){ section.style.display = 'none'; return; } // silencioso para el estudiante
+  fetchTopRanking()
+    .then(rows=>{
+      if(!rows || !rows.length){ section.style.display = 'none'; return; }
+      renderClassRanking(rows);
+      section.style.display = 'block';
+      setClassRankingOpen(true);
+      if(!rows.some(rankIsMe)) renderMyRanking(); // fuera del top 10: buscar la posición real
+    })
+    .catch(()=>{ section.style.display = 'none'; });
+}
+
+function renderClassRanking(rows){
+  const body = document.getElementById('classRankingBody');
+  if(!body) return;
+  let html = '<div class="rank-sub">Top 10 por nota</div><div class="rank-list">';
+  rows.forEach((r,i)=>{
+    const pos = i+1;
+    const me = rankIsMe(r);
+    html += '<div class="rank-row'+(me?' you':'')+'">'
+      + '<div class="rank-pos">'+rankMedal(pos)+'<span>'+pos+'</span></div>'
+      + '<div class="rank-name">'+escapeHtml(rankFullName(r))+(me?'<span class="rank-you-tag">Tú</span>':'')+'</div>'
+      + '<div class="rank-grade">'+Number(r.grade||0).toFixed(1)+' / 10</div>'
+      + '</div>';
+  });
+  html += '</div><div id="classRankingMine"></div>';
+  body.innerHTML = html;
+}
+
+function renderMyRanking(){
+  supabaseGet(RANK_ALL_PATH)
+    .then(r=>{ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(all=>{
+      const slot = document.getElementById('classRankingMine');
+      if(!slot || !all || !all.length) return;
+      const idx = all.findIndex(rankIsMe);
+      if(idx < 0) return;
+      slot.innerHTML = '<div class="rank-mine">Tu posición: #'+(idx+1)+' de '+all.length+'</div>';
+    })
+    .catch(()=>{ /* silencioso: no se muestra la posición personal */ });
+}
+
+/* ── Vista del docente (panel) ── */
+function loadTeacherRanking(){
+  if(!teacherAuthenticated) return;
+  const wrap = document.getElementById('teacher-table-wrap');
+  if(!SUPABASE_CONFIGURED){
+    wrap.innerHTML='<p style="color:var(--red);text-align:center;padding:20px">Supabase no esta configurado. Revisa las credenciales en el codigo.</p>';
+    return;
+  }
+  wrap.innerHTML='<p style="color:var(--muted);text-align:center;padding:20px"><i class="fa-solid fa-spinner fa-spin"></i> Cargando ranking...</p>';
+  fetchTopRanking()
+    .then(rows=>renderTeacherRanking(rows))
+    .catch(()=>{
+      wrap.innerHTML='<p style="color:var(--red);text-align:center;padding:20px">Error de conexion con Supabase. Verifica que el proyecto este activo y las credenciales sean correctas.</p>';
+    });
+}
+
+function renderTeacherRanking(rows){
+  const wrap = document.getElementById('teacher-table-wrap');
+  if(!wrap) return;
+  let html = '<div class="teacher-rank-head"><h3><i class="fa-solid fa-ranking-star"></i> Ranking (Top 10 por nota)</h3>'
+    + '<button type="button" class="btn-back-table" onclick="loadTeacher()"><i class="fa-solid fa-table-list"></i> Volver a la tabla</button></div>';
+  if(!rows || !rows.length){
+    html += '<p class="rank-empty" style="text-align:center">No hay notas guardadas aún.</p>';
+    wrap.innerHTML = html;
+    return;
+  }
+  html += '<div class="teacher-ranking">';
+  rows.forEach((r,i)=>{
+    const pos = i+1;
+    html += '<div class="teacher-rank-row">'
+      + '<div class="rank-pos">'+rankMedal(pos)+'<span>'+pos+'</span></div>'
+      + '<div class="rank-name">'+escapeHtml(rankFullName(r))+'</div>'
+      + '<div class="rank-grade">'+Number(r.grade||0).toFixed(1)+' / 10</div>'
+      + '<div class="teacher-rank-date">'+escapeHtml(rankShortDate(r.timestamp))+'</div>'
+      + '</div>';
+  });
+  html += '</div>';
+  wrap.innerHTML = html;
 }
 
 /* ═══════ PANEL DOCENTE ═══════ */
