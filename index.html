@@ -205,6 +205,7 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
 /* ═══ DIAGRAMAS SVG ═══ */
 .diagram-box{margin:0 0 22px;padding:14px;background:#fdfcf9;border:1px solid var(--hairline);border-radius:12px;text-align:center}
 .diagram-box svg{max-width:100%;height:auto}
+.diagram-box img{max-width:100%;height:auto;border-radius:8px;border:1px solid var(--hairline);display:block;margin:0 auto}
 .diagram-caption{font-size:11px;color:var(--label-gray);margin-top:8px;line-height:1.5}
 
 /* ═══ MODAL PERSONALIZADO (sin alert ni confirm nativos) ═══ */
@@ -850,26 +851,26 @@ const QUESTION_BANK = [
     topic: 'Lectura del diagrama',
     unit: 'Taller 2 · ADA 1 U3',
     syllabus: 'Cuña fiscal en el gráfico',
-    scenario: 'El taller pide etiquetar la cuña fiscal en el diagrama del impuesto.',
-    question: 'En el diagrama de impuesto, la distancia vertical entre el precio que paga el consumidor y el precio que recibe el productor representa:',
+    scenario: 'En el diagrama del impuesto a los televisores de 50 pulgadas, el precio del consumidor es $550 y el precio del productor es algo menor que $500.',
+    question: 'En el diagrama aplicado a la noticia, la distancia vertical entre el precio del consumidor ($550) y el precio del productor representa:',
     options: [
       'El monto del impuesto por unidad, es decir, la cuña fiscal.',
-      'El excedente total del consumidor que permanece en el mercado.',
-      'El ingreso fiscal recaudado por el gobierno central en el mercado.',
-      'La pérdida irrecuperable de eficiencia que genera el impuesto.'
+      'El excedente total del consumidor que permanece después del impuesto.',
+      'El ingreso fiscal recaudado por el gobierno en ese mercado.',
+      'La pérdida irrecuperable de eficiencia que provoca el gravamen.'
     ],
     answer: 0,
-    explanation: 'La distancia vertical entre el precio del consumidor y el precio del productor es el monto del impuesto por unidad, la cuña fiscal.',
+    explanation: 'La brecha vertical entre lo que paga el consumidor y lo que recibe el productor es el impuesto por unidad: la cuña fiscal.',
     type: 'CC',
-    diagram: 'taxDomestic',
-    diagramCaption: 'Impuesto indirecto: la cuña fiscal separa el precio del consumidor del precio del productor.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
     topic: 'Lectura del diagrama',
     unit: 'Taller 2 · ADA 1 U3',
     syllabus: 'Ingreso fiscal en el gráfico',
-    scenario: 'El taller pide etiquetar el ingreso fiscal en el diagrama del impuesto.',
-    question: 'En el diagrama de impuesto, el rectángulo formado entre los precios del consumidor y del productor hasta la nueva cantidad representa:',
+    scenario: 'El diagrama muestra el área que corresponde a lo que recauda el Estado con el impuesto a los televisores de 50 pulgadas.',
+    question: 'En el diagrama aplicado a la noticia, el rectángulo formado entre el precio del consumidor y el del productor hasta la nueva cantidad representa:',
     options: [
       'El ingreso fiscal recaudado por el gobierno.',
       'La pérdida irrecuperable de eficiencia del mercado.',
@@ -877,28 +878,28 @@ const QUESTION_BANK = [
       'El excedente del productor que se transfiere al consumidor.'
     ],
     answer: 0,
-    explanation: 'El rectángulo entre ambos precios hasta la nueva cantidad es el ingreso fiscal: el impuesto por unidad multiplicado por la cantidad transada.',
+    explanation: 'El rectángulo entre ambos precios hasta la cantidad transada es el ingreso fiscal: el impuesto por unidad multiplicado por la nueva cantidad.',
     type: 'CC',
-    diagram: 'taxDomestic',
-    diagramCaption: 'Impuesto indirecto: el rectángulo sombreado es el ingreso fiscal recaudado.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
     topic: 'Lectura del diagrama',
     unit: 'Taller 2 · ADA 1 U3',
     syllabus: 'Pérdida de eficiencia en el gráfico',
-    scenario: 'El taller pide etiquetar la pérdida de peso muerto en el diagrama del impuesto.',
-    question: 'En el diagrama de impuesto, el triángulo ubicado entre la nueva cantidad y la cantidad de equilibrio representa:',
+    scenario: 'Tras el impuesto, la cantidad de televisores vendidos cayó y el mercado quedó por debajo del equilibrio competitivo.',
+    question: 'En el diagrama aplicado a la noticia, el triángulo ubicado entre la nueva cantidad y la cantidad de equilibrio representa:',
     options: [
       'La pérdida irrecuperable de eficiencia causada por el impuesto.',
       'El ingreso fiscal recaudado por el gobierno central en el mercado.',
-      'El excedente del consumidor que permanece en el mercado tras el impuesto.',
-      'El monto total del impuesto que pagan los productores en el mercado.'
+      'El excedente del consumidor que permanece en el mercado.',
+      'El monto total del impuesto que pagan los productores.'
     ],
     answer: 0,
-    explanation: 'El triángulo entre la nueva cantidad y la cantidad de equilibrio es la pérdida irrecuperable de eficiencia generada por el impuesto.',
+    explanation: 'El triángulo entre la nueva cantidad y la cantidad de equilibrio es la pérdida irrecuperable de eficiencia: el valor de las transacciones que ya no ocurren.',
     type: 'CC',
-    diagram: 'taxDomestic',
-    diagramCaption: 'Impuesto indirecto: el triángulo sombreado es la pérdida irrecuperable de eficiencia.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
     topic: 'Modelo del impuesto sobre los compradores',
@@ -1206,6 +1207,12 @@ const SVG_DIAGRAMS = {
   <text x="188" y="162" font-size="11" fill="#1b2a5a" font-weight="700" text-anchor="end">t</text>
   <text x="70" y="322" font-size="10" fill="#5a6478">El impuesto sobre los compradores desplaza la demanda hacia abajo: Pc sube, Pp baja y Q1 es menor que Q*</text>
 </svg>`;
+  },
+
+  /* DIAGRAMA MUDO (imagen) — impuesto ad valorem 10% a televisores de 50" (El Universo, 22-nov-2024)
+     Esquema oferta-demanda del impuesto sobre los vendedores; el estudiante ubica las áreas del modelo. */
+  diagramaMudo: function(){
+    return `<img class="diagram-img" src="img/diagrama-mudo-impuesto-tv.png" alt="Diagrama mudo de oferta y demanda con impuesto ad valorem del 10% a los televisores de 50 pulgadas: precio del consumidor, precio del productor, cuña fiscal, ingreso fiscal y pérdida irrecuperable de eficiencia">`;
   },
 };
 
