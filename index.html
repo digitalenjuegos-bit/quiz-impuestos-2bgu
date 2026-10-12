@@ -1524,11 +1524,17 @@ function showToast(msg){
 
 /* ═══════ PENALIZACIÓN POR CAMBIO DE VENTANA ═══════ */
 let penaltyCount = 0;
+let windowLeaveCount = 0;
 document.addEventListener('visibilitychange', function(){
   const quizActive = document.getElementById('quiz-screen').classList.contains('active');
   if(document.hidden && quizActive){
-    penaltyCount++;
-    showToast('Cambio de ventana detectado. Se resta 0.5 a tu nota final.');
+    windowLeaveCount++;
+    if(windowLeaveCount === 1){
+      showToast('Recordatorio: has cambiado de ventana. Si vuelves a salir, se restarán 0.5 puntos de tu nota.');
+    } else {
+      penaltyCount++;
+      showToast('Cambio de ventana detectado. Se restan 0.5 puntos de tu nota final.');
+    }
   }
 });
 
@@ -1633,6 +1639,7 @@ function launchQuiz(fullName){
   STATE.startTime = Date.now();
   STATE.timerSeconds = 0;
   penaltyCount = 0;
+  windowLeaveCount = 0;
   startGlobalTimer();
   renderQuestion();
   showScreen('quiz-screen');
