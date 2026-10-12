@@ -411,113 +411,140 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
  + noticias reales verificadas de subsidios a combustibles en Ecuador
  ============================================================ */
 const QUESTION_BANK = [
+  /* ══════════ RC — LECTURA COMPRENSIVA DE LA NOTICIA (15) ══════════ */
   {
-    id: 1,
-    topic_tag: 'impuestos_indirectos',
+    topic: 'Impuestos indirectos',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Tipo de impuesto',
+    scenario: 'Ecuador aplicó un gravamen a los televisores de 50 pulgadas.',
     question: '¿Qué tipo de impuesto se aplicó a los televisores de 50 pulgadas en Ecuador según la noticia?',
     options: [
-      'Un impuesto fijo del 10 por ciento sobre el precio del producto.',
-      'Un impuesto específico de 50 dólares por cada unidad vendida en el país.',
+      'Un impuesto del 10 por ciento calculado sobre el precio del producto.',
+      'Un impuesto específico de 50 dólares por cada unidad comercializada.',
       'Un impuesto progresivo que grava la renta de los vendedores minoristas.',
       'Un impuesto sobre las ganancias de capital de los importadores extranjeros.'
     ],
-    correct: 0,
-    explanation: 'La noticia indica que se aplicó un impuesto fijo del 10 por ciento sobre los televisores de 50 pulgadas.'
+    answer: 0,
+    explanation: 'La noticia indica que se aplicó un impuesto del 10 por ciento sobre el precio, es decir, un impuesto ad valorem.',
+    type: 'RC'
   },
   {
-    id: 2,
-    topic_tag: 'precio_consumidor_productor',
+    topic: 'Precio antes del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Precio de equilibrio inicial',
+    scenario: 'La noticia compara el precio del televisor antes y después del impuesto.',
     question: 'Antes de la aplicación del impuesto, ¿cuál era el precio promedio de un televisor de 50 pulgadas en tiendas minoristas?',
     options: [
-      'Quinientos dólares estadounidenses.',
+      'Quinientos dólares estadounidenses en las tiendas minoristas.',
       'Cuatrocientos cincuenta dólares estadounidenses en la mayoría de las tiendas.',
       'Quinientos cincuenta dólares estadounidenses en las tiendas más grandes.',
       'Seiscientos dólares estadounidenses en las principales cadenas comerciales.'
     ],
-    correct: 0,
-    explanation: 'El precio promedio antes del impuesto era de quinientos dólares estadounidenses.'
+    answer: 0,
+    explanation: 'El precio promedio antes del impuesto era de quinientos dólares estadounidenses.',
+    type: 'RC'
   },
   {
-    id: 3,
-    topic_tag: 'precio_consumidor_productor',
-    question: 'Tras la aplicación del impuesto fijo del 10 por ciento, ¿a cuánto subió el precio final del televisor de 50 pulgadas?',
+    topic: 'Precio después del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Precio pagado por el consumidor',
+    scenario: 'El impuesto elevó el precio final del televisor.',
+    question: 'Tras la aplicación del impuesto del 10 por ciento, ¿a cuánto subió el precio final del televisor de 50 pulgadas?',
     options: [
-      'Quinientos cincuenta dólares estadounidenses.',
+      'Quinientos cincuenta dólares estadounidenses en el mercado minorista.',
       'Quinientos veinticinco dólares estadounidenses en algunas tiendas locales.',
       'Quinientos setenta y cinco dólares estadounidenses en las grandes cadenas.',
       'Seiscientos dólares estadounidenses en la mayoría de los establecimientos.'
     ],
-    correct: 0,
-    explanation: 'Con el impuesto, el precio subió a quinientos cincuenta dólares estadounidenses.'
+    answer: 0,
+    explanation: 'Con el impuesto, el precio subió a quinientos cincuenta dólares estadounidenses.',
+    type: 'RC'
   },
   {
-    id: 4,
-    topic_tag: 'incidencia_impuesto',
+    topic: 'Incidencia del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Monto del impuesto',
+    scenario: 'La noticia cuantifica el aumento atribuible al impuesto.',
     question: '¿A cuánto ascendió el aumento de precio directamente atribuible al impuesto?',
     options: [
-      'Cincuenta dólares estadounidenses.',
+      'Cincuenta dólares estadounidenses por cada televisor vendido.',
       'Veinticinco dólares estadounidenses por cada unidad comercializada.',
       'Cien dólares estadounidenses sobre el precio original de venta.',
       'Diez dólares estadounidenses adicionales por cada televisor vendido.'
     ],
-    correct: 0,
-    explanation: 'El aumento fue de cincuenta dólares estadounidenses, equivalente al 10 por ciento sobre quinientos dólares.'
+    answer: 0,
+    explanation: 'El aumento fue de cincuenta dólares estadounidenses, equivalente al 10 por ciento sobre quinientos dólares.',
+    type: 'RC'
   },
   {
-    id: 5,
-    topic_tag: 'incidencia_impuesto',
+    topic: 'Incidencia del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Quién soporta el impuesto',
+    scenario: 'La noticia explica quién asume el aumento en la práctica.',
     question: 'Según la noticia, ¿quién suele absorber, en la práctica, la mayor parte del aumento de precio cuando se aplica este tipo de impuesto?',
     options: [
-      'El consumidor final.',
+      'El consumidor final que adquiere el producto en la tienda.',
       'El gobierno central a través de sus entidades recaudadoras.',
       'Los importadores mayoristas que traen el producto al país.',
       'Las empresas de transporte encargadas de la distribución.'
     ],
-    correct: 0,
-    explanation: 'Aunque el impuesto se recauda a través de los comerciantes, el aumento suele trasladarse al consumidor final.'
+    answer: 0,
+    explanation: 'Aunque el impuesto se recauda a través de los comerciantes, el aumento suele trasladarse al consumidor final.',
+    type: 'RC'
   },
   {
-    id: 6,
-    topic_tag: 'excedentes',
+    topic: 'Excedentes',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Margen del vendedor',
+    scenario: 'Algunos vendedores asumieron parte del impuesto.',
     question: 'Cuando parte del impuesto es asumida por los vendedores, esto implica una reducción en:',
     options: [
-      'Sus márgenes de ganancia.',
+      'Sus márgenes de ganancia para mantener la competitividad.',
       'Sus costos fijos totales para mantener el negocio abierto.',
       'La cantidad total de impuestos que deben pagar al fisco.',
       'La elasticidad de su oferta frente a cambios de precio.'
     ],
-    correct: 0,
-    explanation: 'Algunos vendedores asumieron una pequeña porción del costo, reduciendo sus márgenes de ganancia para mantener la competitividad.'
+    answer: 0,
+    explanation: 'Algunos vendedores asumieron una pequeña porción del costo, reduciendo sus márgenes de ganancia para mantener la competitividad.',
+    type: 'RC'
   },
   {
-    id: 7,
-    topic_tag: 'elasticidad_demanda',
+    topic: 'Elasticidad de la demanda',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Sensibilidad al precio',
+    scenario: 'La noticia describe la sensibilidad del mercado.',
     question: '¿Cómo describe la noticia la sensibilidad al precio del mercado de televisores de 50 pulgadas en Ecuador?',
     options: [
-      'Alta sensibilidad al precio.',
+      'Alta sensibilidad al precio entre los consumidores del mercado.',
       'Baja sensibilidad al precio entre los consumidores locales.',
       'Sensibilidad al precio casi nula en este segmento de mercado.',
       'Sensibilidad al precio completamente inelástica para este producto.'
     ],
-    correct: 0,
-    explanation: 'El mercado se caracteriza por su alta sensibilidad al precio.'
+    answer: 0,
+    explanation: 'El mercado se caracteriza por su alta sensibilidad al precio.',
+    type: 'RC'
   },
   {
-    id: 8,
-    topic_tag: 'cantidad_transada',
+    topic: 'Cantidad transada',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Efecto sobre las ventas',
+    scenario: 'Las ventas cayeron tras la aplicación del impuesto.',
     question: '¿En qué porcentaje disminuyeron las ventas de televisores de 50 pulgadas durante las primeras semanas tras la aplicación del impuesto?',
     options: [
-      'Doce por ciento.',
-      'Cinco por ciento según las estimaciones preliminares.',
-      'Veinticinco por ciento según los datos de las asociaciones.',
-      'Tres por ciento de acuerdo con los registros comerciales.'
+      'Doce por ciento según los datos preliminares de los comerciantes.',
+      'Cinco por ciento según las estimaciones preliminares del sector comercial.',
+      'Veinticinco por ciento según los datos de las asociaciones de comerciantes.',
+      'Tres por ciento de acuerdo con los registros comerciales de las tiendas.'
     ],
-    correct: 0,
-    explanation: 'Las ventas disminuyeron en un doce por ciento durante las primeras semanas.'
+    answer: 0,
+    explanation: 'Las ventas disminuyeron en un doce por ciento durante las primeras semanas.',
+    type: 'RC'
   },
   {
-    id: 9,
-    topic_tag: 'efecto_demanda',
+    topic: 'Efecto sobre la demanda',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Comportamiento del consumidor',
+    scenario: 'Los consumidores reaccionaron al encarecimiento.',
     question: '¿Qué comportamiento adoptaron muchos consumidores ante el encarecimiento del producto?',
     options: [
       'Postergaron su compra o buscaron opciones más económicas.',
@@ -525,12 +552,15 @@ const QUESTION_BANK = [
       'Compraron mayores cantidades para distribuir el costo entre varios meses.',
       'No modificaron en absoluto su decisión de compra habitual.'
     ],
-    correct: 0,
-    explanation: 'Muchos consumidores prefirieron postergar su compra o buscar opciones más económicas, como televisores más pequeños o reacondicionados.'
+    answer: 0,
+    explanation: 'Muchos consumidores prefirieron postergar su compra o buscar opciones más económicas, como televisores más pequeños o reacondicionados.',
+    type: 'RC'
   },
   {
-    id: 10,
-    topic_tag: 'efecto_demanda',
+    topic: 'Efecto sobre la demanda',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Sustitutos y evasión del impuesto',
+    scenario: 'Algunos consumidores buscaron alternativas fuera del mercado local.',
     question: '¿Qué alternativa de compra mencionó la noticia para evitar el impuesto local?',
     options: [
       'Comprar televisores en plataformas internacionales.',
@@ -538,138 +568,337 @@ const QUESTION_BANK = [
       'Adquirir televisores usados dentro del territorio nacional.',
       'Esperar a que el gobierno subsidie directamente el producto.'
     ],
-    correct: 0,
-    explanation: 'Algunos consumidores optaron por comprar televisores en plataformas internacionales, aprovechando precios más bajos y esquivando el impuesto local.'
+    answer: 0,
+    explanation: 'Algunos consumidores optaron por comprar televisores en plataformas internacionales, aprovechando precios más bajos y esquivando el impuesto local.',
+    type: 'RC'
   },
   {
-    id: 11,
-    topic_tag: 'impuestos_indirectos',
-    question: '¿Qué objetivo buscaba el gobierno ecuatoriano al aplicar este impuesto fijo?',
+    topic: 'Impuestos indirectos',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Objetivo de la política fiscal',
+    scenario: 'El gobierno justificó la medida con un objetivo fiscal.',
+    question: '¿Qué objetivo buscaba el gobierno ecuatoriano al aplicar este impuesto?',
     options: [
-      'Aumentar la recaudación fiscal.',
+      'Aumentar la recaudación fiscal del Estado.',
       'Reducir la inflación general de la economía.',
       'Proteger a los productores nacionales de la competencia extranjera.',
       'Subvencionar el consumo de electrodomésticos en el mercado interno.'
     ],
-    correct: 0,
-    explanation: 'El gravamen buscaba aumentar la recaudación fiscal.'
+    answer: 0,
+    explanation: 'El gravamen buscaba aumentar la recaudación fiscal.',
+    type: 'RC'
   },
   {
-    id: 12,
-    topic_tag: 'incidencia_impuesto',
-    question: 'En términos de incidencia del impuesto, cuando la demanda es relativamente elástica, ¿quién tiende a soportar una menor proporción del impuesto?',
+    topic: 'Impuestos indirectos',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Producto gravado',
+    scenario: 'La noticia identifica el bien afectado por el impuesto.',
+    question: '¿A qué producto específico se aplicó el impuesto descrito en la noticia?',
     options: [
-      'Los consumidores.',
-      'Los productores.',
-      'El gobierno central.',
-      'Los bancos comerciales.'
+      'A los televisores de 50 pulgadas vendidos en el país.',
+      'A los televisores de 32 pulgadas importados del extranjero.',
+      'A todos los electrodomésticos de línea blanca del mercado.',
+      'A los equipos de sonido y audio de alta gama.'
     ],
-    correct: 0,
-    explanation: 'Cuando la demanda es relativamente elástica, los productores tienden a soportar una mayor proporción del impuesto y los consumidores una menor proporción.'
+    answer: 0,
+    explanation: 'El impuesto se aplicó específicamente a los televisores de 50 pulgadas.',
+    type: 'RC'
   },
   {
-    id: 13,
-    topic_tag: 'tax_wedge',
-    question: 'El concepto de "tax wedge" (cuña fiscal) hace referencia a:',
+    topic: 'Impuestos indirectos',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Vigencia de la medida',
+    scenario: 'La noticia precisa la fecha de entrada en vigencia.',
+    question: '¿Desde qué fecha entró en vigencia el impuesto sobre los televisores de 50 pulgadas?',
+    options: [
+      'Desde el primero de octubre, según lo indicado en la noticia.',
+      'Desde el primero de noviembre, según lo indicado en la noticia.',
+      'Desde el primero de septiembre, según lo indicado en la noticia.',
+      'Desde el primero de diciembre, según lo indicado en la noticia.'
+    ],
+    answer: 0,
+    explanation: 'El gravamen fue implementado desde el pasado primero de octubre.',
+    type: 'RC'
+  },
+  {
+    topic: 'Efectos de largo plazo',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Advertencia de los economistas',
+    scenario: 'Los economistas advirtieron sobre consecuencias futuras.',
+    question: '¿Qué advirtieron los economistas sobre el efecto del impuesto a largo plazo?',
+    options: [
+      'Una posible disminución de los ingresos fiscales por otras fuentes como el IVA.',
+      'Un aumento sostenido de la recaudación obtenida por el impuesto a los televisores.',
+      'Una mejora inmediata en la competitividad de los comerciantes locales del sector.',
+      'Una reducción permanente del precio de los televisores importados del extranjero.'
+    ],
+    answer: 0,
+    explanation: 'Los economistas advirtieron una posible disminución de la actividad comercial y de los ingresos fiscales por otras fuentes, como el IVA.',
+    type: 'RC'
+  },
+  {
+    topic: 'Respuesta del sector',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Reacción del comercio',
+    scenario: 'El sector comercial reaccionó ante la medida.',
+    question: '¿Qué solicitó el sector comercial al Gobierno tras la aplicación del impuesto?',
+    options: [
+      'Abrir mesas de diálogo para evaluar el impacto del impuesto.',
+      'Eliminar de inmediato el impuesto a los televisores importados.',
+      'Aumentar el porcentaje del impuesto para proteger la industria local.',
+      'Subsidiar la compra de televisores para los consumidores locales.'
+    ],
+    answer: 0,
+    explanation: 'El sector comercial solicitó al Gobierno abrir mesas de diálogo para evaluar el impacto del impuesto y buscar alternativas.',
+    type: 'RC'
+  },
+
+  /* ══════════ CC — CADENA CAUSAL Y TEORÍA (15) ══════════ */
+  {
+    topic: 'Cuña fiscal',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Tax wedge',
+    scenario: 'El taller pide identificar la cuña fiscal en el diagrama.',
+    question: 'El concepto de cuña fiscal (tax wedge) hace referencia a:',
     options: [
       'La diferencia entre el precio pagado por el consumidor y el precio recibido por el productor tras el impuesto.',
-      'La diferencia entre el costo de producción y el precio de venta antes del impuesto.',
-      'La diferencia entre el precio de importación y el precio minorista en el mercado.',
-      'La diferencia entre los ingresos brutos y los costos variables de producción.'
+      'La diferencia entre el costo de producción de la empresa y el precio de venta que rige antes de aplicar el impuesto.',
+      'La diferencia entre el precio de importación del producto y el precio minorista que se cobra en el mercado local.',
+      'La diferencia entre los ingresos brutos de la empresa y los costos variables de producción de cada unidad.'
     ],
-    correct: 0,
-    explanation: 'La cuña fiscal es la brecha entre el precio que paga el consumidor y el precio que recibe el productor después de aplicarse el impuesto.'
+    answer: 0,
+    explanation: 'La cuña fiscal es la brecha entre el precio que paga el consumidor y el precio que recibe el productor después de aplicarse el impuesto.',
+    type: 'CC'
   },
   {
-    id: 14,
-    topic_tag: 'ingreso_fiscal',
+    topic: 'Ingreso fiscal',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Cálculo de la recaudación',
+    scenario: 'El taller pide identificar el ingreso fiscal en el diagrama.',
     question: 'El ingreso fiscal generado por un impuesto sobre un bien se calcula como:',
     options: [
       'El monto del impuesto por unidad multiplicado por la cantidad transada tras el impuesto.',
-      'El precio final multiplicado por la cantidad original vendida en el mercado.',
-      'El aumento de precio multiplicado por todas las unidades producidas inicialmente.',
-      'La pérdida de excedente multiplicada por el tipo impositivo aplicado.'
+      'El precio final del producto multiplicado por la cantidad original vendida en el mercado.',
+      'El aumento de precio multiplicado por todas las unidades producidas inicialmente en el país.',
+      'La pérdida de excedente del consumidor multiplicada por el tipo impositivo aplicado.'
     ],
-    correct: 0,
-    explanation: 'El ingreso fiscal es igual al tipo impositivo por unidad multiplicado por la nueva cantidad transada en el mercado.'
+    answer: 0,
+    explanation: 'El ingreso fiscal es igual al tipo impositivo por unidad multiplicado por la nueva cantidad transada en el mercado.',
+    type: 'CC'
   },
   {
-    id: 15,
-    topic_tag: 'dwl',
+    topic: 'Pérdida de eficiencia',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Pérdida irrecuperable de eficiencia',
+    scenario: 'El taller pide identificar la pérdida de peso muerto en el diagrama.',
     question: 'La pérdida irrecuperable de eficiencia (pérdida de peso muerto) causada por un impuesto representa:',
     options: [
       'Transacciones mutuamente beneficiosas que ya no se realizan en el mercado.',
-      'Un aumento en el bienestar total de consumidores y productores.',
-      'Un ahorro de recursos para el gobierno central.',
-      'Un incremento en la producción total del bien gravado.'
+      'Un aumento en el bienestar total de los consumidores y de los productores del mercado.',
+      'Un ahorro de recursos para el gobierno central que recauda el impuesto.',
+      'Un incremento en la producción total del bien gravado por el impuesto.'
     ],
-    correct: 0,
-    explanation: 'La pérdida irrecuperable de eficiencia corresponde a las transacciones que habrían sido beneficiosas para ambas partes, pero que dejan de realizarse debido al impuesto.'
+    answer: 0,
+    explanation: 'La pérdida irrecuperable de eficiencia corresponde a las transacciones que habrían sido beneficiosas para ambas partes, pero que dejan de realizarse debido al impuesto.',
+    type: 'CC'
   },
   {
-    id: 16,
-    topic_tag: 'excedente_consumidor',
+    topic: 'Excedente del consumidor',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Efecto sobre el bienestar',
+    scenario: 'El taller pide relacionar el impuesto con los excedentes.',
     question: 'La aplicación de un impuesto indirecto sobre un bien tiende a:',
     options: [
-      'Disminuir el excedente del consumidor.',
-      'Aumentar el excedente del consumidor.',
+      'Disminuir el excedente del consumidor en el mercado.',
+      'Aumentar el excedente del consumidor en el mercado.',
       'Mantener el excedente del consumidor sin cambios significativos.',
       'Eliminar completamente el excedente del productor en el mercado.'
     ],
-    correct: 0,
-    explanation: 'El impuesto eleva el precio pagado por el consumidor, lo que reduce su excedente.'
+    answer: 0,
+    explanation: 'El impuesto eleva el precio pagado por el consumidor, lo que reduce su excedente.',
+    type: 'CC'
   },
   {
-    id: 17,
-    topic_tag: 'excedente_productor',
+    topic: 'Excedente del productor',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Efecto sobre el bienestar',
+    scenario: 'El taller pide relacionar el impuesto con los excedentes.',
     question: '¿Qué efecto tiene un impuesto indirecto sobre el excedente del productor?',
     options: [
       'Disminuye, ya que recibe un precio menor por cada unidad vendida.',
-      'Aumenta, porque vende menos unidades a mayor precio.',
-      'Permanece exactamente igual al equilibrio inicial del mercado.',
-      'Se duplica debido a la recaudación fiscal del gobierno.'
+      'Aumenta, porque vende menos unidades a un precio más alto en el mercado.',
+      'Permanece exactamente igual al equilibrio inicial que existía en el mercado.',
+      'Se duplica debido a la recaudación fiscal que obtiene el gobierno central.'
     ],
-    correct: 0,
-    explanation: 'El productor recibe un precio neto menor tras el impuesto, por lo que su excedente disminuye.'
+    answer: 0,
+    explanation: 'El productor recibe un precio neto menor tras el impuesto, por lo que su excedente disminuye.',
+    type: 'CC'
   },
   {
-    id: 18,
-    topic_tag: 'incidencia_impuesto',
-    question: 'Si la demanda de un bien es muy elástica y la oferta relativamente inelástica, la incidencia del impuesto recaerá principalmente sobre:',
+    topic: 'Incidencia del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Demanda elástica',
+    scenario: 'El taller pide analizar la incidencia según la elasticidad.',
+    question: 'En términos de incidencia del impuesto, cuando la demanda es relativamente elástica, ¿quién tiende a soportar una menor proporción del impuesto?',
     options: [
-      'Los productores.',
-      'Los consumidores.',
-      'Los consumidores y productores por partes exactamente iguales.',
-      'Únicamente sobre el gobierno central.'
+      'Los consumidores, que pueden sustituir el bien con mayor facilidad.',
+      'Los productores, que no pueden ajustar su producción con la misma facilidad.',
+      'El gobierno central, que recauda el impuesto aplicado en el mercado local.',
+      'Los bancos comerciales, que financian la producción del bien en el país.'
     ],
-    correct: 0,
-    explanation: 'Cuando la demanda es elástica, los consumidores pueden evitar el impuesto cambiando a sustitutos, por lo que los productores soportan mayor proporción.'
+    answer: 0,
+    explanation: 'Cuando la demanda es relativamente elástica, los consumidores pueden evitar el impuesto cambiando a sustitutos, por lo que soportan una menor proporción.',
+    type: 'CC'
   },
   {
-    id: 19,
-    topic_tag: 'incidencia_impuesto',
+    topic: 'Incidencia del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Demanda inelástica',
+    scenario: 'El taller pide analizar la incidencia según la elasticidad.',
     question: 'Si la demanda de un bien es relativamente inelástica, la incidencia del impuesto tiende a recaer principalmente sobre:',
     options: [
-      'Los consumidores.',
-      'Los productores.',
-      'Los importadores mayoristas que distribuyen el producto.',
-      'Los distribuidores encargados de la venta al por menor.'
+      'Los consumidores, que son menos sensibles al cambio de precio.',
+      'Los productores, que absorben la mayor parte del impuesto aplicado al bien.',
+      'Los importadores mayoristas que distribuyen el producto en el mercado local.',
+      'Los distribuidores encargados de la venta al por menor en las tiendas.'
     ],
-    correct: 0,
-    explanation: 'Con demanda inelástica, los consumidores son menos sensibles al precio y soportan una mayor proporción del impuesto.'
+    answer: 0,
+    explanation: 'Con demanda inelástica, los consumidores son menos sensibles al precio y soportan una mayor proporción del impuesto.',
+    type: 'CC'
   },
   {
-    id: 20,
-    topic_tag: 'impuestos_indirectos',
+    topic: 'Incidencia del impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Elasticidad relativa',
+    scenario: 'El taller pide analizar la incidencia según la elasticidad.',
+    question: 'Si la demanda de un bien es muy elástica y la oferta relativamente inelástica, la incidencia del impuesto recaerá principalmente sobre:',
+    options: [
+      'Los productores, que enfrentan una demanda muy sensible al precio.',
+      'Los consumidores, que pagan la mayor parte del impuesto aplicado al bien.',
+      'Los consumidores y los productores por partes exactamente iguales.',
+      'Únicamente sobre el gobierno central que recauda el impuesto en el mercado.'
+    ],
+    answer: 0,
+    explanation: 'Cuando la demanda es elástica, los consumidores pueden evitar el impuesto cambiando a sustitutos, por lo que los productores soportan mayor proporción.',
+    type: 'CC'
+  },
+  {
+    topic: 'Tipos de impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Específico frente a ad valorem',
+    scenario: 'El taller distingue tipos de impuestos indirectos.',
     question: '¿Cuál es la principal diferencia entre un impuesto específico y un impuesto ad valorem?',
     options: [
       'El impuesto específico es una cantidad fija por unidad, mientras que el ad valorem es un porcentaje del precio.',
-      'El impuesto específico solo se aplica a importaciones, mientras que el ad valorem solo a bienes nacionales.',
-      'El impuesto específico varía con el precio, mientras que el ad valorem es fijo.',
-      'No existe ninguna diferencia entre ambos tipos de impuesto en la práctica.'
+      'El impuesto específico solo se aplica a las importaciones, mientras que el ad valorem solo a los bienes nacionales.',
+      'El impuesto específico varía con el precio del bien, mientras que el ad valorem permanece fijo.',
+      'No existe ninguna diferencia relevante entre ambos tipos de impuesto en la práctica.'
     ],
-    correct: 0,
-    explanation: 'Un impuesto específico grava una cantidad monetaria fija por unidad; un impuesto ad valorem grava un porcentaje del precio del bien.'
+    answer: 0,
+    explanation: 'Un impuesto específico grava una cantidad monetaria fija por unidad; un impuesto ad valorem grava un porcentaje del precio del bien.',
+    type: 'CC'
+  },
+  {
+    topic: 'Desplazamiento de la oferta',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Representación gráfica del impuesto',
+    scenario: 'El taller pide dibujar el impuesto en un diagrama de oferta y demanda.',
+    question: 'En un diagrama de oferta y demanda, la aplicación de un impuesto indirecto sobre un bien se representa como:',
+    options: [
+      'Un desplazamiento de la curva de oferta hacia arriba en el monto del impuesto.',
+      'Un desplazamiento de la curva de demanda hacia la derecha en el monto del impuesto.',
+      'Un movimiento a lo largo de la curva de oferta sin desplazamiento alguno.',
+      'Un desplazamiento de la curva de demanda hacia abajo en el monto del impuesto.'
+    ],
+    answer: 0,
+    explanation: 'El impuesto eleva el costo de producir cada unidad, por lo que la curva de oferta se desplaza hacia arriba en el monto del impuesto.',
+    type: 'CC'
+  },
+  {
+    topic: 'Equilibrio con impuesto',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Efecto sobre precio y cantidad',
+    scenario: 'El taller pide identificar el nuevo equilibrio tras el impuesto.',
+    question: 'Tras la aplicación de un impuesto indirecto, en el nuevo equilibrio del mercado:',
+    options: [
+      'El precio pagado por el consumidor sube y la cantidad transada disminuye.',
+      'El precio pagado por el consumidor baja y la cantidad transada aumenta.',
+      'El precio pagado por el consumidor sube y la cantidad transada aumenta.',
+      'El precio pagado por el consumidor baja y la cantidad transada disminuye.'
+    ],
+    answer: 0,
+    explanation: 'El impuesto desplaza la oferta hacia arriba: el precio que paga el consumidor aumenta y la cantidad transada cae por debajo del equilibrio inicial.',
+    type: 'CC'
+  },
+  {
+    topic: 'Pérdida de eficiencia',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Origen de la pérdida de peso muerto',
+    scenario: 'El taller pide explicar por qué el impuesto genera ineficiencia.',
+    question: '¿Por qué surge la pérdida irrecuperable de eficiencia cuando se aplica un impuesto?',
+    options: [
+      'Porque el impuesto reduce la cantidad transada por debajo del nivel eficiente del mercado.',
+      'Porque el impuesto aumenta la cantidad transada por encima del nivel eficiente del mercado.',
+      'Porque el impuesto elimina por completo el excedente del productor en el mercado.',
+      'Porque el impuesto transfiere todo el excedente del consumidor al gobierno central.'
+    ],
+    answer: 0,
+    explanation: 'El impuesto reduce la cantidad transada por debajo del nivel eficiente, de modo que se pierden transacciones mutuamente beneficiosas.',
+    type: 'CC'
+  },
+  {
+    topic: 'Lectura del diagrama',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Cuña fiscal en el gráfico',
+    scenario: 'El taller pide etiquetar la cuña fiscal en el diagrama del impuesto.',
+    question: 'En el diagrama de impuesto, la distancia vertical entre el precio que paga el consumidor y el precio que recibe el productor representa:',
+    options: [
+      'El monto del impuesto por unidad, es decir, la cuña fiscal.',
+      'El excedente total del consumidor que permanece en el mercado.',
+      'El ingreso fiscal recaudado por el gobierno central en el mercado.',
+      'La pérdida irrecuperable de eficiencia que genera el impuesto.'
+    ],
+    answer: 0,
+    explanation: 'La distancia vertical entre el precio del consumidor y el precio del productor es el monto del impuesto por unidad, la cuña fiscal.',
+    type: 'CC',
+    diagram: 'taxDomestic',
+    diagramCaption: 'Impuesto indirecto: la cuña fiscal separa el precio del consumidor del precio del productor.'
+  },
+  {
+    topic: 'Lectura del diagrama',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Ingreso fiscal en el gráfico',
+    scenario: 'El taller pide etiquetar el ingreso fiscal en el diagrama del impuesto.',
+    question: 'En el diagrama de impuesto, el rectángulo formado entre los precios del consumidor y del productor hasta la nueva cantidad representa:',
+    options: [
+      'El ingreso fiscal recaudado por el gobierno.',
+      'La pérdida irrecuperable de eficiencia del mercado.',
+      'El excedente del consumidor que se pierde por el impuesto.',
+      'El excedente del productor que se transfiere al consumidor.'
+    ],
+    answer: 0,
+    explanation: 'El rectángulo entre ambos precios hasta la nueva cantidad es el ingreso fiscal: el impuesto por unidad multiplicado por la cantidad transada.',
+    type: 'CC',
+    diagram: 'taxDomestic',
+    diagramCaption: 'Impuesto indirecto: el rectángulo sombreado es el ingreso fiscal recaudado.'
+  },
+  {
+    topic: 'Lectura del diagrama',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Pérdida de eficiencia en el gráfico',
+    scenario: 'El taller pide etiquetar la pérdida de peso muerto en el diagrama del impuesto.',
+    question: 'En el diagrama de impuesto, el triángulo ubicado entre la nueva cantidad y la cantidad de equilibrio representa:',
+    options: [
+      'La pérdida irrecuperable de eficiencia causada por el impuesto.',
+      'El ingreso fiscal recaudado por el gobierno central en el mercado.',
+      'El excedente del consumidor que permanece en el mercado tras el impuesto.',
+      'El monto total del impuesto que pagan los productores en el mercado.'
+    ],
+    answer: 0,
+    explanation: 'El triángulo entre la nueva cantidad y la cantidad de equilibrio es la pérdida irrecuperable de eficiencia generada por el impuesto.',
+    type: 'CC',
+    diagram: 'taxDomestic',
+    diagramCaption: 'Impuesto indirecto: el triángulo sombreado es la pérdida irrecuperable de eficiencia.'
   }
 ];
 
@@ -805,7 +1034,42 @@ const SVG_DIAGRAMS = {
   <text x="313" y="162" font-size="11" fill="#1b2a5a" font-weight="700">s</text>
   <text x="70" y="322" font-size="10" fill="#5a6478">El subsidio desplaza la oferta hacia abajo: Pc baja, Pp sube y Q1 supera a Q*</text>
 </svg>`;
-  }
+  },
+  taxDomestic: function(){
+    return `<svg viewBox="0 0 460 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de impuesto indirecto doméstico">
+  <rect x="0" y="0" width="460" height="330" fill="#fdfcf9"/>
+  <line x1="70" y1="280" x2="440" y2="280" stroke="#1b2a5a" stroke-width="1.5"/>
+  <line x1="70" y1="280" x2="70" y2="40" stroke="#1b2a5a" stroke-width="1.5"/>
+  <text x="430" y="298" font-size="12" fill="#1b2a5a" text-anchor="end" font-weight="600">Cantidad</text>
+  <text x="60" y="48" font-size="12" fill="#1b2a5a" text-anchor="start" font-weight="600">Precio</text>
+  <rect x="70" y="138" width="137" height="40" fill="rgba(217,177,75,.30)"/>
+  <text x="138" y="156" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">Ingreso fiscal</text>
+  <text x="138" y="170" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">= t × Q1</text>
+  <polygon points="207,138 207,178 241,158" fill="rgba(181,69,58,.22)"/>
+  <text x="222" y="163" font-size="10" fill="#8e1b3a" font-weight="700">PIE</text>
+  <line x1="100" y1="240" x2="410" y2="60" stroke="#b45309" stroke-width="2.5"/>
+  <text x="404" y="56" font-size="13" fill="#b45309" font-weight="700">S</text>
+  <line x1="100" y1="200" x2="410" y2="20" stroke="#b45309" stroke-width="2.5" stroke-dasharray="7 5" opacity="0.9"/>
+  <text x="455" y="16" font-size="13" fill="#b45309" font-weight="700" text-anchor="end">S₁ = S + t</text>
+  <line x1="90" y1="70" x2="400" y2="250" stroke="#1e40af" stroke-width="2.5"/>
+  <text x="405" y="258" font-size="13" fill="#1e40af" font-weight="700">D</text>
+  <line x1="70" y1="158" x2="241" y2="158" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="72" y="151" font-size="11" fill="#2e7d32" font-weight="600">P*</text>
+  <line x1="70" y1="138" x2="207" y2="138" stroke="#b5453a" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="72" y="132" font-size="11" fill="#b5453a" font-weight="600">Pc</text>
+  <line x1="70" y1="178" x2="207" y2="178" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="72" y="192" font-size="11" fill="#7b1fa2" font-weight="600">Pp</text>
+  <line x1="241" y1="158" x2="241" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="207" y1="138" x2="207" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="241" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q*</text>
+  <text x="207" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q1</text>
+  <line x1="200" y1="138" x2="200" y2="178" stroke="#1b2a5a" stroke-width="1.5"/>
+  <polygon points="200,138 196,148 204,148" fill="#1b2a5a"/>
+  <polygon points="200,178 196,168 204,168" fill="#1b2a5a"/>
+  <text x="188" y="162" font-size="11" fill="#1b2a5a" font-weight="700" text-anchor="end">t</text>
+  <text x="70" y="322" font-size="10" fill="#5a6478">El impuesto desplaza la oferta hacia arriba: Pc sube, Pp baja y Q1 es menor que Q*</text>
+</svg>`;
+  },
 };
 
 /* ═══════ STATE & CONFIG ═══════ */
