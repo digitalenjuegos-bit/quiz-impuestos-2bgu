@@ -1631,7 +1631,7 @@ function finishQuiz(){
       question: q.question,
       selected: STATE.userAnswers[i],
       correct: STATE.shuffledAnswers[i],
-      options: q.options,
+      options: STATE.shuffledOptions[i],
       topic: q.topic,
       ok: STATE.userAnswers[i] === STATE.shuffledAnswers[i]
     })),
