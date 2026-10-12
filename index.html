@@ -942,38 +942,40 @@ const QUESTION_BANK = [
     diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
-    topic: 'Modelo del impuesto sobre los compradores',
+    topic: 'Bienestar · excedente del consumidor',
     unit: 'Taller 2 · ADA 1 U3',
-    syllabus: 'Impuesto sobre los compradores',
-    scenario: 'El texto presenta dos formas de representar un mismo impuesto indirecto: una sobre los vendedores y otra sobre los compradores.',
-    question: 'En el modelo en que el impuesto se aplica legalmente a los compradores, la representación gráfica correcta es:',
+    syllabus: 'Excedente del consumidor en el gráfico',
+    scenario: 'En el diagrama del impuesto a los televisores de 50 pulgadas, el precio que pagan los compradores es $550 y la curva de demanda conserva su forma original.',
+    question: 'En el diagrama aplicado a la noticia, el área que representa el excedente del consumidor después del impuesto es:',
     options: [
-      'Un desplazamiento de la curva de demanda hacia abajo en el monto del impuesto por unidad.',
-      'Un desplazamiento de la curva de oferta hacia arriba en el monto del impuesto por unidad.',
-      'Un desplazamiento de la curva de demanda hacia arriba en el monto del impuesto por unidad.',
-      'Un desplazamiento de la curva de oferta hacia abajo en el monto del impuesto por unidad.'
+      'El triángulo que queda por encima del precio que pagan los compradores y por debajo de la curva de demanda.',
+      'El triángulo que queda por debajo del precio que reciben los vendedores y por encima de la curva de oferta.',
+      'El rectángulo formado entre el precio del comprador y el del vendedor hasta la nueva cantidad.',
+      'El triángulo ubicado entre la nueva cantidad y la cantidad de equilibrio del mercado.'
     ],
     answer: 0,
-    explanation: 'Cuando el impuesto se aplica a los compradores, su disposición a pagar baja: la curva de demanda se desplaza hacia abajo una distancia igual al impuesto por unidad.',
+    explanation: 'El excedente del consumidor es el área entre la curva de demanda y el precio que paga: el triángulo por encima de $550 y por debajo de la demanda.',
     type: 'CC',
-    diagram: 'taxBuyers',
-    diagramCaption: 'Impuesto sobre los compradores: la demanda se desplaza hacia abajo de D₁ a D₂.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
-    topic: 'Equivalencia de los dos modelos',
+    topic: 'Bienestar · transferencia de excedente',
     unit: 'Taller 2 · ADA 1 U3',
-    syllabus: 'Modelos equivalentes del impuesto',
-    scenario: 'El texto subraya que gravar a los vendedores o a los compradores conduce al mismo resultado de mercado.',
-    question: 'Al comparar el modelo del impuesto sobre los vendedores con el del impuesto sobre los compradores, la teoría económica concluye que:',
+    syllabus: 'Transferencia de excedente con el impuesto',
+    scenario: 'El impuesto reduce el excedente de compradores y vendedores, pero parte de esa pérdida no desaparece: cambia de dueño.',
+    question: 'En el diagrama del impuesto a los televisores, el rectángulo del ingreso fiscal representa el excedente que:',
     options: [
-      'Ambos modelos dan igual precio a los compradores, igual precio a los vendedores y la misma cantidad transada.',
-      'El modelo sobre los compradores reduce la cantidad transada mucho más que el modelo sobre los vendedores.',
-      'El modelo sobre los vendedores recauda un ingreso fiscal mayor que el que recauda el modelo sobre los compradores.',
-      'Solo el modelo sobre los compradores genera una pérdida irrecuperable de eficiencia dentro del mercado.'
+      'Se transfiere de compradores y vendedores hacia el gobierno.',
+      'Se transfiere de los compradores hacia los vendedores.',
+      'Se transfiere de los vendedores hacia los compradores.',
+      'Desaparece por completo del mercado sin beneficiar a ningún agente.'
     ],
     answer: 0,
-    explanation: 'Aunque cambie la curva que se desplaza, ambos modelos llevan al mismo precio del comprador, al mismo precio del vendedor y a la misma cantidad transada.',
-    type: 'CC'
+    explanation: 'El ingreso fiscal es una transferencia: el excedente que pierden compradores y vendedores pasa al gobierno. El impuesto no transfiere excedente entre compradores y vendedores.',
+    type: 'CC',
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
     topic: 'Incidencia y obligación legal',
@@ -992,47 +994,65 @@ const QUESTION_BANK = [
     type: 'CC'
   },
   {
-    topic: 'Lectura del diagrama · cuña fiscal, compradores',
+    topic: 'Bienestar · excedente del productor',
     unit: 'Taller 2 · ADA 1 U3',
-    syllabus: 'Cuña fiscal en el gráfico',
-    scenario: 'El diagrama muestra el impuesto aplicado sobre el lado de los compradores.',
-    question: 'En el diagrama del impuesto sobre los compradores, la distancia vertical entre el precio que pagan los compradores y el precio que reciben los vendedores representa:',
+    syllabus: 'Excedente del productor en el gráfico',
+    scenario: 'En el diagrama del impuesto a los televisores de 50 pulgadas, los vendedores reciben un precio menor que el que pagan los compradores.',
+    question: 'En el diagrama aplicado a la noticia, el área que representa el excedente del productor después del impuesto es:',
     options: [
-      'El monto del impuesto por unidad: la cuña fiscal que separa ambos precios.',
-      'El ingreso fiscal que recauda el gobierno en el mercado de este bien.',
-      'El excedente del consumidor que aún permanece tras aplicarse el impuesto.',
-      'La pérdida irrecuperable de eficiencia que el impuesto genera en este mercado.'
+      'El triángulo que queda por debajo del precio que reciben los vendedores y por encima de la curva de oferta.',
+      'El triángulo que queda por encima del precio que pagan los compradores y por debajo de la curva de demanda.',
+      'El rectángulo formado entre el precio del comprador y el del vendedor hasta la nueva cantidad.',
+      'El triángulo ubicado entre la nueva cantidad y la cantidad de equilibrio del mercado.'
     ],
     answer: 0,
-    explanation: 'En ambos modelos, la separación vertical entre el precio del comprador y el del vendedor es el impuesto por unidad, es decir, la cuña fiscal.',
+    explanation: 'El excedente del productor es el área entre la curva de oferta y el precio que recibe: el triángulo por debajo del precio del vendedor y por encima de la oferta.',
     type: 'CC',
-    diagram: 'taxBuyers',
-    diagramCaption: 'Impuesto sobre los compradores: la cuña fiscal separa el precio del comprador del precio del vendedor.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
-    topic: 'Lectura del diagrama · nuevo equilibrio, compradores',
+    topic: 'Bienestar · oferta elástica',
     unit: 'Taller 2 · ADA 1 U3',
-    syllabus: 'Equilibrio en el gráfico',
-    scenario: 'El diagrama muestra el impuesto aplicado sobre el lado de los compradores y la demanda desplazada.',
-    question: 'En el diagrama del impuesto sobre los compradores, el nuevo equilibrio del mercado después del impuesto se ubica en:',
+    syllabus: 'Excedente del productor y elasticidad de la oferta',
+    scenario: 'La oferta de televisores es muy elástica: los productores pueden trasladar el impuesto a los compradores subiendo el precio.',
+    question: 'Cuando la oferta es muy elástica, el excedente del productor después del impuesto:',
     options: [
-      'La intersección de la oferta con la demanda desplazada D₂, que fija el precio que reciben los vendedores.',
-      'La intersección de la oferta original con la demanda original D₁, que fija el precio de equilibrio inicial.',
-      'La intersección de la demanda original D₁ con el eje vertical, que fija el precio que pagan los compradores.',
-      'La intersección de la oferta con la demanda original D₁, que fija el precio que reciben los vendedores.'
+      'Disminuye poco, porque la carga recae sobre los compradores.',
+      'Disminuye mucho, porque los productores absorben casi todo el impuesto.',
+      'No cambia, porque el impuesto solo afecta al excedente del consumidor.',
+      'Aumenta, porque el precio que reciben los vendedores sube con el impuesto.'
     ],
     answer: 0,
-    explanation: 'Con el impuesto sobre los compradores, el nuevo equilibrio está en la intersección de la oferta con la demanda desplazada D₂; ese punto fija el precio que reciben los vendedores.',
+    explanation: 'Con oferta elástica, los productores trasladan el impuesto a los compradores: su precio recibido baja poco y su excedente se reduce poco.',
     type: 'CC',
-    diagram: 'taxBuyers',
-    diagramCaption: 'Impuesto sobre los compradores: el nuevo equilibrio fija el precio que reciben los vendedores.'
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
+  },
+  {
+    topic: 'Bienestar · demanda elástica',
+    unit: 'Taller 2 · ADA 1 U3',
+    syllabus: 'Excedente del consumidor y elasticidad de la demanda',
+    scenario: 'La demanda de televisores es muy elástica: los consumidores pueden sustituir este bien por otros si el precio sube.',
+    question: 'Cuando la demanda es muy elástica, el excedente del consumidor después del impuesto:',
+    options: [
+      'Disminuye poco, porque la carga recae sobre los productores.',
+      'Disminuye mucho, porque los consumidores absorben casi todo el impuesto.',
+      'No cambia, porque el impuesto solo afecta al excedente del productor.',
+      'Aumenta, porque el precio que pagan los compradores baja con el impuesto.'
+    ],
+    answer: 0,
+    explanation: 'Con demanda elástica, los consumidores sustituyen el bien y la carga recae más sobre los productores: el excedente del consumidor se reduce poco.',
+    type: 'CC',
+    diagram: 'diagramaMudo',
+    diagramCaption: 'Diagrama del impuesto ad valorem del 10% a los televisores de 50 pulgadas (El Universo, 22-nov-2024).'
   },
   {
     topic: 'Aplicación a la noticia · precio con impuesto',
     unit: 'Taller 2 · ADA 1 U3',
     syllabus: 'Precio del comprador',
     scenario: 'En la noticia, el precio de un televisor de 50 pulgadas pasó de 500 a 550 dólares tras el impuesto del 10 por ciento.',
-    question: 'En el modelo del impuesto sobre los compradores aplicado a la noticia, el valor de 550 dólares corresponde a:',
+    question: 'En el modelo del impuesto aplicado a la noticia, el valor de 550 dólares corresponde a:',
     options: [
       'El precio que pagan los compradores, que incluye el monto del impuesto aplicado.',
       'El precio que reciben los vendedores después de descontarse el impuesto aplicado.',
@@ -1354,77 +1374,6 @@ const SVG_DIAGRAMS = {
   <text x="70" y="322" font-size="10" fill="#5a6478">El subsidio desplaza la oferta hacia abajo: Pc baja, Pp sube y Q1 supera a Q*</text>
 </svg>`;
   },
-  taxDomestic: function(){
-    return `<svg viewBox="0 0 460 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de impuesto indirecto doméstico">
-  <rect x="0" y="0" width="460" height="330" fill="#fdfcf9"/>
-  <line x1="70" y1="280" x2="440" y2="280" stroke="#1b2a5a" stroke-width="1.5"/>
-  <line x1="70" y1="280" x2="70" y2="40" stroke="#1b2a5a" stroke-width="1.5"/>
-  <text x="430" y="298" font-size="12" fill="#1b2a5a" text-anchor="end" font-weight="600">Cantidad</text>
-  <text x="60" y="48" font-size="12" fill="#1b2a5a" text-anchor="start" font-weight="600">Precio</text>
-  <rect x="70" y="138" width="137" height="40" fill="rgba(217,177,75,.30)"/>
-  <text x="138" y="156" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">Ingreso fiscal</text>
-  <text x="138" y="170" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">= t × Q1</text>
-  <polygon points="207,138 207,178 241,158" fill="rgba(181,69,58,.22)"/>
-  <text x="222" y="163" font-size="10" fill="#8e1b3a" font-weight="700">PIE</text>
-  <line x1="100" y1="240" x2="410" y2="60" stroke="#b45309" stroke-width="2.5"/>
-  <text x="404" y="56" font-size="13" fill="#b45309" font-weight="700">S</text>
-  <line x1="100" y1="200" x2="410" y2="20" stroke="#b45309" stroke-width="2.5" stroke-dasharray="7 5" opacity="0.9"/>
-  <text x="455" y="16" font-size="13" fill="#b45309" font-weight="700" text-anchor="end">S₁ = S + t</text>
-  <line x1="90" y1="70" x2="400" y2="250" stroke="#1e40af" stroke-width="2.5"/>
-  <text x="405" y="258" font-size="13" fill="#1e40af" font-weight="700">D</text>
-  <line x1="70" y1="158" x2="241" y2="158" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="151" font-size="11" fill="#2e7d32" font-weight="600">P*</text>
-  <line x1="70" y1="138" x2="207" y2="138" stroke="#b5453a" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="132" font-size="11" fill="#b5453a" font-weight="600">Pc</text>
-  <line x1="70" y1="178" x2="207" y2="178" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="192" font-size="11" fill="#7b1fa2" font-weight="600">Pp</text>
-  <line x1="241" y1="158" x2="241" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
-  <line x1="207" y1="138" x2="207" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="241" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q*</text>
-  <text x="207" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q1</text>
-  <line x1="200" y1="138" x2="200" y2="178" stroke="#1b2a5a" stroke-width="1.5"/>
-  <polygon points="200,138 196,148 204,148" fill="#1b2a5a"/>
-  <polygon points="200,178 196,168 204,168" fill="#1b2a5a"/>
-  <text x="188" y="162" font-size="11" fill="#1b2a5a" font-weight="700" text-anchor="end">t</text>
-  <text x="70" y="322" font-size="10" fill="#5a6478">El impuesto desplaza la oferta hacia arriba: Pc sube, Pp baja y Q1 es menor que Q*</text>
-</svg>`;
-  },
-  taxBuyers: function(){
-    return `<svg viewBox="0 0 460 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de impuesto sobre los compradores doméstico">
-  <rect x="0" y="0" width="460" height="330" fill="#fdfcf9"/>
-  <line x1="70" y1="280" x2="440" y2="280" stroke="#1b2a5a" stroke-width="1.5"/>
-  <line x1="70" y1="280" x2="70" y2="40" stroke="#1b2a5a" stroke-width="1.5"/>
-  <text x="430" y="298" font-size="12" fill="#1b2a5a" text-anchor="end" font-weight="600">Cantidad</text>
-  <text x="60" y="48" font-size="12" fill="#1b2a5a" text-anchor="start" font-weight="600">Precio</text>
-  <rect x="70" y="138" width="137" height="40" fill="rgba(217,177,75,.30)"/>
-  <text x="138" y="156" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">Ingreso fiscal</text>
-  <text x="138" y="170" font-size="10.5" fill="#6b4a16" text-anchor="middle" font-weight="600">= t × Q1</text>
-  <polygon points="207,138 207,178 241,158" fill="rgba(181,69,58,.22)"/>
-  <text x="222" y="163" font-size="10" fill="#8e1b3a" font-weight="700">PIE</text>
-  <line x1="100" y1="240" x2="410" y2="60" stroke="#b45309" stroke-width="2.5"/>
-  <text x="404" y="56" font-size="13" fill="#b45309" font-weight="700">S</text>
-  <line x1="90" y1="70" x2="400" y2="250" stroke="#1e40af" stroke-width="2.5"/>
-  <text x="405" y="258" font-size="13" fill="#1e40af" font-weight="700">D₁</text>
-  <line x1="90" y1="110" x2="400" y2="290" stroke="#1e40af" stroke-width="2.5" stroke-dasharray="7 5" opacity="0.9"/>
-  <text x="455" y="304" font-size="13" fill="#1e40af" font-weight="700" text-anchor="end">D₂ = D₁ − t</text>
-  <line x1="70" y1="158" x2="241" y2="158" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="151" font-size="11" fill="#2e7d32" font-weight="600">P*</text>
-  <line x1="70" y1="138" x2="207" y2="138" stroke="#b5453a" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="132" font-size="11" fill="#b5453a" font-weight="600">Pc</text>
-  <line x1="70" y1="178" x2="207" y2="178" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="6 4"/>
-  <text x="72" y="192" font-size="11" fill="#7b1fa2" font-weight="600">Pp</text>
-  <line x1="241" y1="158" x2="241" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
-  <line x1="207" y1="138" x2="207" y2="280" stroke="#9aa3b2" stroke-width="1" stroke-dasharray="3 3"/>
-  <text x="241" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q*</text>
-  <text x="207" y="294" font-size="11" fill="#3a4a44" text-anchor="middle">Q1</text>
-  <line x1="200" y1="138" x2="200" y2="178" stroke="#1b2a5a" stroke-width="1.5"/>
-  <polygon points="200,138 196,148 204,148" fill="#1b2a5a"/>
-  <polygon points="200,178 196,168 204,168" fill="#1b2a5a"/>
-  <text x="188" y="162" font-size="11" fill="#1b2a5a" font-weight="700" text-anchor="end">t</text>
-  <text x="70" y="322" font-size="10" fill="#5a6478">El impuesto sobre los compradores desplaza la demanda hacia abajo: Pc sube, Pp baja y Q1 es menor que Q*</text>
-</svg>`;
-  },
-
   /* DIAGRAMA MUDO (imagen) — impuesto ad valorem 10% a televisores de 50" (El Universo, 22-nov-2024)
      Esquema oferta-demanda del impuesto sobre los vendedores; el estudiante ubica las áreas del modelo. */
   diagramaMudo: function(){
