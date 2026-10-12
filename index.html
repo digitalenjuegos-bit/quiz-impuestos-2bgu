@@ -238,27 +238,27 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
     <div class="brand-mark">E</div>
     <div class="brand-text">
       <div class="brand-text t1">Economía — 2BGU</div>
-      <div class="brand-text t2">Subvenciones</div>
+      <div class="brand-text t2">Impuestos</div>
     </div>
   </div>
-  <div class="brand-right">Microeconomía · Unidad 3<br><strong>ADA — Subvenciones</strong></div>
+  <div class="brand-right">Microeconomía · Unidad 3<br><strong>ADA — Impuestos indirectos</strong></div>
 </div>
 
 <!-- ═══════ SCREEN: INTRO ═══════ -->
 <section id="welcome-screen" class="screen active">
 <div class="welcome-card">
   <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Evaluación formativa</div>
-  <h1 class="welcome-title">Subvenciones</h1>
-  <p class="welcome-sub">Preguntas con cadena causal estilo examinador IB, análisis del diagrama de subsidio doméstico (precio al consumidor, precio al productor, brecha de la subvención y gasto fiscal), incidencia según elasticidades, efectos sobre el bienestar y casos de noticias reales sobre subsidios a combustibles en Ecuador.</p>
+  <h1 class="welcome-title">Impuestos</h1>
+  <p class="welcome-sub">Preguntas con cadena causal estilo examinador IB, análisis del diagrama de impuesto indirecto doméstico (precio antes del impuesto, precio al consumidor, precio al productor, cuña fiscal e ingreso fiscal), incidencia según elasticidades, efectos sobre el bienestar y lectura de una noticia real sobre el impuesto a los televisores de 50 pulgadas en Ecuador.</p>
   <div class="skills-box">
     <div class="skills-title"><i class="fa-solid fa-brain"></i> Competencias evaluadas</div>
     <ul class="skills-list">
-      <li>Cadena causal del subsidio: menor costo, desplazamiento de la oferta, mayor cantidad</li>
-      <li>Análisis del diagrama de subsidio doméstico (precio al consumidor, precio al productor, brecha)</li>
-      <li>Incidencia de la subvención según las elasticidades relativas</li>
-      <li>Efectos sobre el bienestar: excedente del consumidor, excedente del productor, gasto fiscal y pérdida de eficiencia</li>
-      <li>Costo fiscal y costo de oportunidad del gasto en subsidios</li>
-      <li>Lectura de noticias reales de subsidios a combustibles en Ecuador</li>
+      <li>Cadena causal del impuesto: mayor costo, desplazamiento de la oferta, menor cantidad</li>
+      <li>Análisis del diagrama de impuesto indirecto doméstico (precio antes, precio al consumidor, precio al productor, cuña fiscal)</li>
+      <li>Incidencia del impuesto según las elasticidades relativas</li>
+      <li>Efectos sobre el bienestar: excedente del consumidor, excedente del productor, ingreso fiscal y pérdida irrecuperable de eficiencia</li>
+      <li>Diseño de la política fiscal y costo de oportunidad de los impuestos indirectos</li>
+      <li>Lectura de una noticia real sobre el impuesto a los televisores de 50 pulgadas en Ecuador</li>
     </ul>
   </div>
   <div class="welcome-meta">
@@ -406,9 +406,9 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
 
 <script>
 /* ============================================================
- BANCO DE PREGUNTAS — SUBSIDIOS Y SUBVENCIONES (Microeconomía 2BGU)
- Basado en las diapositivas "Subsidios en Microeconomía (corregido)"
- + noticias reales verificadas de subsidios a combustibles en Ecuador
+ BANCO DE PREGUNTAS — IMPUESTOS INDIRECTOS (Microeconomía 2BGU)
+ Basado en el taller "Análisis del impuesto" (ADA 1 U3)
+ + noticia real verificada sobre el impuesto a los televisores de 50 pulgadas en Ecuador
  ============================================================ */
 const QUESTION_BANK = [
   /* ══════════ RC — LECTURA COMPRENSIVA DE LA NOTICIA (15) ══════════ */
@@ -1750,7 +1750,7 @@ function printPDF(){
   doc.text('Informe de Retroalimentación', ML, 11);
   doc.setFontSize(9); doc.setFont('helvetica','normal');
   doc.setTextColor(...C.gold);
-  doc.text('ADA — Subvenciones · 2026 – 2027', ML, 17);
+  doc.text('ADA — Impuestos indirectos · 2026 – 2027', ML, 17);
   doc.setFontSize(8);
   doc.setTextColor(200,210,230);
   doc.text('Economía · 2BGU', ML, 23);
@@ -1766,7 +1766,7 @@ function printPDF(){
   doc.setTextColor(255,255,255);
   const subH = 9;
   doc.roundedRect(ML, y-2, CW, subH, 2, 2, 'F');
-  doc.text('Resultado de la Evaluación — Subvenciones', ML+5, y+4);
+  doc.text('Resultado de la Evaluación — Impuestos indirectos', ML+5, y+4);
   y += subH + 4;
 
   // Metadata table (3 columns)
@@ -1963,7 +1963,7 @@ function printPDF(){
   doc.setTextColor(100,100,100);
   doc.text('Estudiante 2BGU', ML+sigW+20+sigW/2, y+8, {align:'center'});
 
-  doc.save('Informe_Subvenciones_2BGU_' + name.replace(/\s+/g,'_') + '.pdf');
+  doc.save('Informe_Impuestos_2BGU_' + name.replace(/\s+/g,'_') + '.pdf');
   } catch(e){ console.error('printPDF error:', e); alertModal('Error al generar PDF: ' + e.message); }
 }
 
@@ -2053,7 +2053,7 @@ function generateStudentPDF(row){
   doc.setFontSize(15);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
   doc.text('Informe de Retroalimentación',ML,11);
   doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(...C.gold);
-  doc.text('ADA — Subvenciones · 2026 – 2027',ML,17);
+  doc.text('ADA — Impuestos indirectos · 2026 – 2027',ML,17);
   doc.setFontSize(8);doc.setTextColor(200,210,230);
   doc.text('Economía · 2BGU',ML,23);
   doc.setDrawColor(...C.gold);doc.setLineWidth(1.5);doc.line(0,26,W,26);
@@ -2062,7 +2062,7 @@ function generateStudentPDF(row){
   doc.setFillColor(...C.navy);
   doc.roundedRect(ML,y-2,CW,9,2,2,'F');
   doc.setFontSize(9.5);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
-  doc.text('Resultado de la Evaluación — Subvenciones',ML+5,y+4);
+  doc.text('Resultado de la Evaluación — Impuestos indirectos',ML+5,y+4);
   y+=13;
 
   const colW=CW/3;
@@ -2199,7 +2199,7 @@ function generateStudentPDF(row){
   doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(100,100,100);
   doc.text('Estudiante 2BGU',ML+sigW+20+sigW/2,y+8,{align:'center'});
 
-  doc.save('Informe_Subvenciones_2BGU_'+name.trim().replace(/\s+/g,'_')+'.pdf');
+  doc.save('Informe_Impuestos_2BGU_'+name.trim().replace(/\s+/g,'_')+'.pdf');
   } catch(e){ console.error('generateStudentPDF error:',e);alertModal('Error al generar PDF: '+e.message); }
 }
 
@@ -2354,7 +2354,7 @@ function exportExcel(){
   const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'calificaciones_subvenciones_2bgu.csv';
+  a.download = 'calificaciones_impuestos_2bgu.csv';
   a.click();
   URL.revokeObjectURL(a.href);
 }
