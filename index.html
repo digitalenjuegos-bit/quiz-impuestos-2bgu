@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subvenciones — 2BGU — Evaluación ADA</title>
+<title>Impuestos indirectos — 2BGU — Evaluación ADA</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%231B2A5A'/><text x='50' y='70' font-size='55' text-anchor='middle' fill='%23D9B14B' font-family='Georgia'>E</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -411,48 +411,266 @@ body::before{content:"";position:fixed;inset:0;background-image:url("data:image/
  + noticias reales verificadas de subsidios a combustibles en Ecuador
  ============================================================ */
 const QUESTION_BANK = [
-// ===== RC: LECTURA COMPRENSIVA (noticias reales) =====
-{topic:"Noticias Ecuador",unit:"LaHora 13 sep 2025",syllabus:"Fin del subsidio",scenario:"Ecuador eliminó el subsidio al diésel vigente desde 1974.",question:"\"El pasaje no subirá ni un solo centavo\", afirmó el ministro Luque al anunciar en septiembre de 2025 el fin del subsidio al diésel, que costaba cerca de $1.100 millones al año. ¿Qué condición sostiene esa promesa?",options:["El transporte urbano recibe dinero que cubre el alza del combustible","El galón de diésel vuelve a costar $1,80 como costaba antes del anuncio","Los operadores de buses reducen la flota para gastar menos combustible","El precio del pasaje queda fijado por decreto y no puede variar"],answer:0,explanation:"La promesa depende de que el transporte reciba una compensación por el alza, como los $400 a $1.000 mensuales para 23.300 choferes del mismo paquete.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"LaHora 13 sep 2025",syllabus:"Precio con subsidio",scenario:"El galón de diésel pasó de $1,80 a $2,80 por Decreto Ejecutivo.",question:"El 13 de septiembre de 2025 el galón de diésel pasó de $1,80 a $2,80 en Ecuador (LaHora). ¿Qué representaba el precio de $1,80 vigente hasta esa fecha?",options:["Un precio máximo impuesto a las estaciones de servicio por el gobierno","Un impuesto específico que se cobraba por cada galón de diésel vendido","Un precio por debajo del mercado que sostenía el subsidio estatal","Un precio de referencia calculado con el costo de importación mundial"],answer:2,explanation:"Con el subsidio activo el usuario pagaba menos que el nivel de mercado; retirado el apoyo, el precio oficial saltó hasta $2,80 el galón.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"LaHora 13 sep 2025",syllabus:"Transferencia focalizada",scenario:"El paquete de 18 medidas incluyó pagos mensuales a choferes.",question:"Entre las 18 medidas anunciadas en 2025: \"23.300 choferes de transporte urbano recibirían entre $400 y $1.000 mensuales\", con un desembolso de $220 millones (LaHora). ¿A qué tipo de pago corresponde?",options:["Una subvención específica que baja el costo por unidad que se produce","Una transferencia directa que reemplaza el subsidio al combustible","Un descuento ad valorem aplicado sobre el precio de cada pasaje","Una ayuda a consumidores que desplaza la curva de demanda hacia arriba"],answer:1,explanation:"Es una entrega de dinero a un grupo identificado, no una reducción del costo de producción ni un cálculo en porcentaje sobre el precio.",type:"RC"},
-{topic:"Diseño de políticas",unit:"LaHora 13 sep 2025",syllabus:"Transferencias alternativas",scenario:"Se repartieron bonos y devoluciones de impuestos a grupos específicos.",question:"El gobierno entregó el Bono Raíces de $1.000 a 100.000 agricultores y devolvió $130 millones en impuestos a 115.000 adultos mayores (LaHora, 2025). ¿Por qué estas entregas no modifican el precio del bien subsidiado?",options:["Porque reducen el costo marginal de cada unidad que se produce en el país","Porque aumentan la disposición a pagar por ese bien en el mercado","Porque fijan un precio máximo al productor y otro al consumidor","Porque transfieren ingreso sin alterar costos ni precios del bien"],answer:3,explanation:"Una transferencia de dinero no cambia el costo de producción ni la disposición a pagar, así que ninguna de las dos curvas se desplaza.",type:"RC"},
-{topic:"Costo fiscal",unit:"Proforma 2026 (El Universo/Primicias)",syllabus:"Recorte del subsidio",scenario:"La Proforma 2026 redujo el gasto en subsidios a combustibles.",question:"La Proforma 2026 bajó el subsidio a combustibles de $2.504 millones en 2025 a $1.159,61 millones, una caída del 54% (El Universo y Primicias). Si la ayuda por unidad se recorta, ¿qué ocurre en el mercado?",options:["La curva de oferta se desplaza hacia abajo y sube la cantidad","La curva de oferta vuelve hacia arriba y baja la cantidad","La curva de demanda se desplaza hacia abajo y sube el precio","La curva de demanda sube porque el gobierno gasta más dinero"],answer:1,explanation:"Al recortar la ayuda por unidad, la curva de oferta se devuelve hacia arriba, el precio al consumidor sube y la cantidad comercializada disminuye.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"Proforma 2026 (El Universo/Primicias)",syllabus:"Prioridad del GLP",scenario:"El cilindro de gas doméstico se mantiene en $1,65.",question:"En la Proforma 2026 el subsidio al GLP doméstico ocupa $722 millones, el 62% del gasto en combustibles, y el cilindro se mantiene en $1,65 como \"medida de protección social\". ¿Qué justifica esa prioridad?",options:["Es un bien esencial de consumo generalizado que el Estado protege","El gasto en GLP es menor que el gasto destinado a subsidiar el diésel","El transporte privado concentra el 62% del gasto en subsidios de 2026","El cilindro doméstico es un bien de exportación con precio internacional"],answer:0,explanation:"El 62% se concentra en el GLP por ser bien esencial; el diésel apenas llega a $191 millones y el sector automotor pasó del 44% al 0%.",type:"RC"},
-{topic:"Costo fiscal",unit:"Proforma 2026 (El Universo/Primicias)",syllabus:"Redirección del gasto",scenario:"La partida del sector automotor desaparece de la Proforma.",question:"El subsidio a combustibles destinado al sector automotor cayó del 44% del gasto en 2025 al 0% en 2026 (Proforma 2026). ¿Qué lectura correcta se desprende?",options:["El subsidio a combustibles quedó destinado únicamente al GLP doméstico","El consumo de combustible del sector automotor se redujo a cero en 2026","El gasto en subsidios a combustibles bajó 54% frente al año anterior","Las gasolinas quedaron fuera del sistema de bandas de precios vigente"],answer:2,explanation:"El total pasó de $2.504 millones a $1.159,61 millones y el gasto se redirigió: el GLP llegó al 62% y el diésel quedó en $191 millones.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"Expreso 15 jul 2026",syllabus:"Saldo negativo",scenario:"Creció la diferencia entre costo de importación y precio nacional.",question:"Entre enero y mayo de 2026 el saldo negativo por la diferencia entre el costo de importación y el precio de venta nacional llegó a $757,1 millones, un 60,7% más que los $471,1 millones de 2025 (Expreso, 15 de julio de 2026). ¿Qué explica ese aumento?",options:["El volumen importado cayó y elevó el costo unitario del combustible","El sistema de bandas impidió que el precio bajara durante esos meses","La subvención por galón se redujo y el Estado asumió un gasto mayor","El precio de venta quedó por debajo del costo real de importación"],answer:3,explanation:"El Estado vende cada galón por debajo de lo que le cuesta traerlo: en julio de 2026 el precio de venta era $3,31 frente a $4,33 de costo real.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"Expreso 15 jul 2026",syllabus:"Sistema de bandas",scenario:"Las bandas limitan alzas y bajas del precio con techos distintos.",question:"El sistema de bandas limita las alzas máximas del precio al 5% mensual y las bajas máximas al 10% mensual (Expreso, 2026). ¿Qué efecto fiscal tiene esa asimetría?",options:["Cuando el costo internacional baja, el precio local no puede bajar más del 5%","Cuando el costo internacional sube, el precio local sube igual y el gasto no varía","Cuando el costo internacional sube, el precio local avanza lento y crece el gasto","Cuando el costo internacional baja, el gasto del subsidio sube en ese mes"],answer:2,explanation:"Como las alzas se frenan al 5% mensual, cuando el costo de importación trepa el precio nacional se atrasa y la brecha que paga el Estado se ensancha.",type:"RC"},
-{topic:"Costo fiscal",unit:"Expreso 15 jul 2026",syllabus:"Costo de oportunidad",scenario:"Un analista advierte de dónde salen los recursos del subsidio.",question:"El analista Orellana Giler afirmó en Expreso (15 de julio de 2026): \"Los subsidios no se pagan solos... obligan a reasignar recursos de educación, salud\". ¿Qué concepto ilustra la frase?",options:["La pérdida de eficiencia que produce la sobreproducción en el mercado","El costo de oportunidad de gastar presupuesto en bienes subsidiados","La incidencia del subsidio según las elasticidades relativas del mercado","El excedente del productor, que se mide hasta el precio recibido"],answer:1,explanation:"Cada dólar del subsidio es un dólar que no financia educación o salud; ese valor alternativo renunciado es el costo de oportunidad.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"Teleamazonas 10 jul 2026",syllabus:"Subsidio por galón",scenario:"El Estado cubre la diferencia entre venta y costo de importación.",question:"Teleamazonas informó el 10 de julio de 2026 que el precio de venta era $3,31 mientras el costo real de importación era $4,33, o sea cerca de $1,02 por galón a cargo del Estado. ¿Qué mide esa cifra?",options:["Lo que paga el gobierno por cada galón vendido al precio nacional","La utilidad que obtiene el importador en cada galón que comercializa","El impuesto específico que grava la venta de combustible en el país","El recargo que los consumidores pagan por encima del precio mundial"],answer:0,explanation:"La diferencia entre lo que cuesta importar y lo que se cobra la asume el Estado: $4,33 menos $3,31 da cerca de $1,02 por galón.",type:"RC"},
-{topic:"Costo fiscal",unit:"Teleamazonas 10 jul 2026",syllabus:"Gasto del subsidio",scenario:"Se reportó el gasto acumulado en tres meses de subsidio.",question:"Entre mayo y julio de 2026 se destinaron aproximadamente $650 millones en subsidios (Teleamazonas, 10 de julio de 2026). ¿Qué relación aritmética explica ese gasto?",options:["El precio de venta por galón multiplicado por el volumen importado","La subvención por galón sumada al precio de venta nacional","El consumo nacional de combustible multiplicado por el precio mundial","La subvención por galón multiplicada por las unidades vendidas"],answer:3,explanation:"El gasto total equivale a la brecha por unidad multiplicada por los galones vendidos, igual que la subvención por unidad por la cantidad con subsidio.",type:"RC"},
-{topic:"Costo fiscal",unit:"LaHora 18 may 2026",syllabus:"Sensibilidad del gasto",scenario:"Se cuantificó el efecto de un dólar más de subvención.",question:"LaHora (18 de mayo de 2026) calculó que cada $1 adicional de subsidio por galón de diésel equivale a $4 millones diarios, $120 millones mensuales y cerca de $1.460 millones anuales. ¿Qué permite concluir ese cálculo?",options:["El precio al consumidor baja en la misma proporción en que sube el gasto","El gasto crece con la brecha por unidad y con el volumen consumido","La pérdida de eficiencia desaparece cuando el volumen de consumo es alto","El subsidio adicional se financia con recaudación por exportaciones"],answer:1,explanation:"Un dólar más por galón se multiplica por los millones de galones que consume el país, por eso un cambio unitario mueve cifras de miles de millones.",type:"RC"},
-{topic:"Noticias Ecuador",unit:"LaHora 18 may 2026",syllabus:"Precio de mercado",scenario:"Se estimó el precio del combustible sin apoyo estatal.",question:"LaHora informó el 18 de mayo de 2026 que sin subsidio el diésel costaría más de $5 por galón y la gasolina extra más de $3,7. ¿Qué permite afirmar esa comparación?",options:["Sin subsidio la cantidad demandada sería mayor que la actual","El precio que recibe el productor es menor al que fijaría el mercado","El subsidio mantiene el precio al consumidor por debajo del mercado","Sin subsidio el productor recibiría más dinero por cada galón vendido"],answer:2,explanation:"Sin el apoyo, el usuario pagaría más de $5, o sea que la subvención mantiene por debajo de ese nivel lo que cuesta el galón.",type:"RC"},
-{topic:"Diseño de políticas",unit:"LaHora 18 may 2026",syllabus:"Temporalidad",scenario:"Las compensaciones de transporte se prorrogaron por decreto.",question:"Por el Decreto Ejecutivo 378, las compensaciones de transporte urbano se extendieron por más tiempo del previsto originalmente (LaHora, 18 de mayo de 2026). ¿Qué riesgo de diseño ilustra?",options:["La fuga del beneficio hacia grupos que no eran el objetivo de la política","El aumento del excedente del consumidor en el mercado de combustibles","La corrección de una falla de mercado por información asimétrica","La dependencia del apoyo y la ineficiencia de mantenerlo demasiado"],answer:3,explanation:"Alargar el apoyo sin fecha de salida crea dependencia y sostiene gasto que podría ir a otras prioridades: por eso la temporalidad es una buena práctica de diseño.",type:"RC"},
-{topic:"Formas de subvención",unit:"Diapositivas Subsidios",syllabus:"Suma fija",scenario:"Un programa paga un monto anual fijo a talleres mecánicos.",question:"Un programa entrega a cada taller mecánico un pago anual fijo de $5.000, sin importar cuántas unidades reparen (forma de subvención: suma fija). ¿Cuál es el efecto esperado?",options:["No cambia el costo marginal, así que la curva de oferta no se mueve","Reduce el costo marginal y desplaza la curva de oferta hacia abajo","Aumenta la disposición a pagar y desplaza la curva de demanda hacia arriba","Baja el precio que paga el consumidor en cada unidad que compra"],answer:0,explanation:"Como el pago no varía con la cantidad, no altera decisiones marginales de precio ni de cantidad; solo mejora el resultado financiero del taller.",type:"RC"},
-{topic:"Formas de subvención",unit:"Diapositivas Subsidios",syllabus:"Subvención ad valorem",scenario:"La ayuda se calcula como porcentaje del precio del bien.",question:"Otra forma de subvención es la ad valorem, calculada como un porcentaje del precio del bien. Si ese porcentaje se mantiene, ¿qué ocurre cuando el precio del bien sube?",options:["El monto entregado en dinero se mantiene fijo sin importar el precio","La curva de demanda se desplaza hacia abajo por el mayor precio","El monto entregado en dinero crece junto con el precio del bien","Solo pueden recibir la subvención los productores del mercado"],answer:2,explanation:"Al ser un porcentaje, cuando el precio sube el valor en dinero de la ayuda también sube, a diferencia de un monto fijo por unidad.",type:"RC"},
-{topic:"Incidencia",unit:"Diapositivas Subsidios",syllabus:"Elasticidades relativas",scenario:"Cultivo con oferta poco elástica en el corto plazo.",question:"En el mercado de un cultivo la oferta es poco elástica en el corto plazo porque la cosecha ya está sembrada. Si el gobierno otorga una ayuda por unidad, ¿quién captura más del beneficio?",options:["Los consumidores, porque su demanda es la que menos responde al precio","Los productores, porque reciben más de lo que baja el precio pagado","Ambos capturan exactamente la misma parte del beneficio en todo caso","El gobierno, porque recupera el gasto con la mayor recaudación de impuestos"],answer:1,explanation:"Cuando la oferta es la curva más inelástica de las dos, el precio al productor sube más y él se queda con la mayor parte de la ayuda.",type:"RC"},
-{topic:"Bienestar",unit:"Diapositivas Subsidios",syllabus:"Pérdida de eficiencia",scenario:"El subsidio amplía la producción más allá del equilibrio previo.",question:"Al ampliar la producción con subsidio, las unidades adicionales cuestan más de producir de lo que los consumidores valoran (concepto de pérdida de eficiencia). ¿Qué implica ese hecho?",options:["El excedente del consumidor aumenta más de lo que gasta el gobierno","Las ganancias de ambos agentes compensan el gasto del presupuesto","El valor de las unidades nuevas supera el costo de producirlas","El mercado produce más de lo que conviene socialmente en total"],answer:3,explanation:"Por cada unidad entre la cantidad previa y la nueva el costo social supera el valor asignado, por eso aparece pérdida de eficiencia aunque suban los excedentes.",type:"RC"},
-{topic:"Diseño de políticas",unit:"Diapositivas Subsidios",syllabus:"Focalización",scenario:"Una ayuda para pequeños agricultores llega a grandes exportadoras.",question:"Un subsidio diseñado para pequeños agricultores termina beneficiando principalmente a grandes empresas exportadoras (fuga de beneficios). ¿Qué falla de diseño explica el resultado?",options:["La falta de focalización para llegar a los beneficiarios reales","La ausencia de condicionalidad en el gasto del cupón entregado","El reemplazo del pago por unidad por una transferencia fija","La falta de políticas complementarias que acompañen el programa completo"],answer:0,explanation:"Sin focalización el dinero llega a quien no era el objetivo; la condicionalidad falla cuando el cupón no exige gastarlo en el rubro previsto.",type:"RC"},
-// ===== CC: CADENA CAUSAL / TEORÍA (con diagramas) =====
-{topic:"Diagrama de subsidio",unit:"Diapositivas Subsidios",syllabus:"Brecha del subsidio",scenario:"Subsidio específico otorgado a los productores.",question:"En el diagrama de subsidio, ¿qué representa la brecha vertical entre el precio al consumidor (Pc) y el precio al productor (Pp)?",options:["El impuesto específico que grava cada unidad vendida en el mercado","La ganancia marginal que obtiene el productor por cada unidad extra","La pérdida de eficiencia total que genera el mercado subsidiado","La subvención por unidad que asume el gobierno en cada venta"],answer:3,diagram:"subsidyDomestic",diagramCaption:"Pc: precio al consumidor · Pp: precio al productor · s: subvención por unidad · P* y Q*: equilibrio inicial · Q1: cantidad con subsidio.",explanation:"El productor termina recibiendo el precio al productor (Pp) y el consumidor paga el precio al consumidor (Pc); la distancia entre ambos es exactamente la subvención por unidad.",type:"CC"},
-{topic:"Diagrama de subsidio",unit:"Diapositivas Subsidios",syllabus:"Cadena causal",scenario:"Se aplica una subvención específica a los productores.",question:"Una subvención específica a productores baja su costo de producción, desplaza la curva de oferta hacia abajo y aumenta la cantidad. ¿Qué ocurre con los dos precios?",options:["Los dos precios bajan en la misma proporción por el menor costo","Baja el precio al consumidor y sube el precio al productor","Sube el precio al consumidor porque crece la curva de demanda","Baja el precio al productor porque la oferta se vuelve más cara"],answer:1,diagram:"subsidyDomestic",diagramCaption:"Pc: precio al consumidor · Pp: precio al productor · s: subvención por unidad · P* y Q*: equilibrio inicial · Q1: cantidad con subsidio.",explanation:"La oferta se corre hacia abajo, la cantidad aumenta, el consumidor paga menos y el productor termina recibiendo más por cada unidad vendida.",type:"CC"},
-{topic:"Diagrama de subsidio",unit:"Diapositivas Subsidios",syllabus:"Gasto fiscal",scenario:"El gasto del gobierno se dibuja como un rectángulo.",question:"En el diagrama, el rectángulo del gasto del gobierno se obtiene al multiplicar la subvención por unidad por ¿qué otra cantidad?",options:["La cantidad de unidades vendidas con la subvención aplicada","La cantidad de unidades que se vendían antes de la subvención","La diferencia entre el precio original y el precio nuevo","La suma del excedente del consumidor y el del productor"],answer:0,diagram:"subsidyDomestic",diagramCaption:"Pc: precio al consumidor · Pp: precio al productor · s: subvención por unidad · P* y Q*: equilibrio inicial · Q1: cantidad con subsidio.",explanation:"El área es un rectángulo de altura la subvención por unidad y de base la cantidad vendida con subsidio, por eso el gasto se multiplica así.",type:"CC"},
-{topic:"Bienestar",unit:"Diapositivas Subsidios",syllabus:"Excedente del productor",scenario:"Se evalúa el bienestar de ambos agentes con subsidio.",question:"Al calcular el bienestar con la subvención vigente, ¿hasta qué precio se mide el excedente del productor?",options:["Hasta el precio al consumidor, ya que es quien hace el desembolso","Hasta el precio de equilibrio previo, ignorando la subvención","Hasta el precio que el productor recibe, y no hasta el de venta","Hasta el costo marginal promedio de las unidades que se venden"],answer:2,diagram:"subsidyDomestic",diagramCaption:"Pc: precio al consumidor · Pp: precio al productor · s: subvención por unidad · P* y Q*: equilibrio inicial · Q1: cantidad con subsidio.",explanation:"El productor termina con el precio al productor (Pp), o sea lo que paga el consumidor más la subvención; medirlo hasta el precio de venta subestimaría su ganancia.",type:"CC"},
-{topic:"Incidencia",unit:"Diapositivas Subsidios",syllabus:"Reparto del beneficio",scenario:"La demanda del bien es más inelástica que la oferta.",question:"Si la curva de demanda es más inelástica que la curva de oferta, ¿cómo se reparte la subvención específica?",options:["Sube más el precio al productor de lo que baja el precio al consumidor","Baja más el precio al consumidor que el alza del precio al productor","Los dos precios quedan casi fijos porque la demanda no responde","La cantidad vendida no cambia y el único efecto es el gasto fiscal"],answer:1,explanation:"Como la demanda apenas se mueve, el consumidor se lleva casi todo el beneficio; el precio al productor solo trepa un poco por encima del nivel previo.",type:"CC"},
-{topic:"Bienestar",unit:"Diapositivas Subsidios",syllabus:"Pérdida de eficiencia",scenario:"Consumidor y productor ganan con el subsidio.",question:"¿Por qué aparece pérdida de eficiencia en el mercado con subsidio, aunque consumidor y productor ganen?",options:["Porque las unidades nuevas generan un excedente que compensa el gasto","Porque cada unidad nueva se vende siempre por debajo de su costo","Porque el excedente del consumidor crece sin gastar dinero público","Porque esas unidades cuestan más de producir de lo que valen"],answer:3,diagram:"subsidyDomestic",diagramCaption:"Pc: precio al consumidor · Pp: precio al productor · s: subvención por unidad · P* y Q*: equilibrio inicial · Q1: cantidad con subsidio.",explanation:"Entre la cantidad previa y la nueva, el costo de producir supera el valor que les dan los consumidores; esa diferencia es la pérdida de eficiencia.",type:"CC"},
-{topic:"Diagrama de subsidio",unit:"Diapositivas Subsidios",syllabus:"Precio al productor",scenario:"Datos del mercado de combustibles con subsidio.",question:"En el mercado de combustibles, el consumidor paga $3,31 por galón y el Estado aporta cerca de $1,02 por cada galón. ¿Cuánto recibe en total quien vende el combustible?",options:["$1,02 por galón, que es solamente el aporte que hace el gobierno","$2,29 por galón, resultado de restar el aporte estatal al precio","$4,33 por galón, suma del pago del consumidor y del gobierno","$3,31 por galón, que es el precio que fija el gobierno nacional"],answer:2,explanation:"El vendedor suma lo que paga el consumidor con lo que aporta el Estado: $3,31 más $1,02 igual a $4,33, el costo real de importación del galón.",type:"CC"},
-{topic:"Formas de subvención",unit:"Diapositivas Subsidios",syllabus:"Específicas y ad valorem",scenario:"Se comparan dos formas de otorgar la subvención.",question:"¿Cuál es la diferencia clave entre la subvención específica y la ad valorem?",options:["La primera es un monto fijo por unidad y la segunda es un porcentaje","La primera solo se entrega a consumidores y la segunda a productores","La primera mueve la demanda y la segunda mueve la curva de oferta","La primera exige condicionalidad y la segunda es una transferencia fija"],answer:0,explanation:"La específica entrega siempre el mismo monto por unidad vendida, mientras la ad valorem equivale a un porcentaje del precio del bien.",type:"CC"},
-{topic:"Subsidios",unit:"Diapositivas Subsidios",syllabus:"Externalidades positivas",scenario:"El bien subsidiado beneficia también a terceros ajenos al intercambio.",question:"Si el gobierno subsidia un bien que genera beneficios para terceros, como la vacunación, ¿qué efecto se espera?",options:["Genera sobreproducción que siempre reduce el bienestar del conjunto","Desplaza la oferta hacia arriba y encarece el bien para todos","Elimina la pérdida de eficiencia porque producir resulta gratuito","Acerca la cantidad producida al nivel que conviene socialmente"],answer:3,explanation:"La subvención corrige una falla de mercado: al existir beneficios a terceros, el mercado produce menos de lo socialmente deseado y el apoyo amplía esa cantidad.",type:"CC"},
-{topic:"Formas de subvención",unit:"Diapositivas Subsidios",syllabus:"Subvención a consumidores",scenario:"El gobierno entrega cupones con descuento a los hogares.",question:"El gobierno entrega cupones que los hogares canjean con descuento en un bien específico. ¿Qué efecto tiene esa medida en el mercado?",options:["Reduce el costo marginal y desplaza la curva de oferta hacia abajo","Aumenta la disposición a pagar y desplaza la demanda hacia arriba","No mueve ninguna curva porque el cupón es de monto único","Disminuye la cantidad ofrecida en cada nivel de precio posible"],answer:1,explanation:"El cupón eleva lo que el hogar está dispuesto a pagar por el bien, así que la curva de demanda se corre hacia arriba y crece la cantidad.",type:"CC"},
-{topic:"Subsidios",unit:"Diapositivas Subsidios",syllabus:"Sectores estratégicos",scenario:"Se apoya la producción de un insumo clave para el país.",question:"¿Qué objetivo de política ilustra subsidiar la producción de fertilizantes, un insumo que el país quiere fortalecer?",options:["Mantener el precio del insumo por encima del que fija el mercado","Reducir la cantidad producida para evitar el exceso de oferta","Sostener la inversión y el empleo en un sector estratégico","Aumentar la recaudación fiscal gracias al mayor volumen vendido"],answer:2,explanation:"Apoyar sectores estratégicos busca que haya más inversión y empleo en una actividad que el gobierno considera prioritaria para el país.",type:"CC"},
-{topic:"Costo fiscal",unit:"Proforma 2026 (El Universo/Primicias)",syllabus:"Costo fiscal",scenario:"El gasto total de subsidios equivale al 15% de la Proforma.",question:"Los subsidios suman $6.928,59 millones, cerca del 15% de la Proforma 2026 de $46.255,57 millones. ¿Qué problema de diseño ilustra esa magnitud?",options:["El costo fiscal alto y su costo de oportunidad para el Estado","La pérdida de eficiencia por sobreproducción del bien subsidiado","La fuga del beneficio hacia grupos que no eran el objetivo","El aumento del excedente del productor en el mercado local"],answer:0,explanation:"Un gasto de esa dimensión consume recursos que dejan de estar disponibles en educación, salud o infraestructura: ese es el costo de oportunidad.",type:"CC"},
-{topic:"Subsidios",unit:"Diapositivas Subsidios",syllabus:"Distorsión de recursos",scenario:"Los recursos se mueven hacia el bien que el Estado financia.",question:"¿Por qué el subsidio provoca sobreproducción del bien apoyado y subproducción de otros bienes?",options:["Porque el subsidio reduce el precio de todos los demás bienes del mercado","Porque los recursos se desvían hacia el sector que el Estado financia","Porque el subsidio encarece la producción de todos los demás bienes","Porque el gobierno limita las importaciones de los bienes sustitutos"],answer:1,explanation:"Al hacer más rentable el bien subsidiado, capital y trabajo se mudan hacia ese sector y se alejan de las demás actividades del mercado.",type:"CC"},
-{topic:"Diseño de políticas",unit:"Diapositivas Subsidios",syllabus:"Focalización",scenario:"Un programa usa el registro de ingresos de los hogares.",question:"Un programa revisa el registro de ingresos de los hogares para entregar el apoyo solo a los más pobres. ¿Qué práctica de diseño se aplica?",options:["Condicionalidad, porque exige gastarlo en el rubro fijado","Temporalidad, porque fija una fecha de salida al programa","Subvención ad valorem, porque calcula el apoyo en porcentaje","Focalización, porque identifica antes a los beneficiarios"],answer:3,explanation:"Focalizar es decidir de antemano quién recibe el apoyo; sin ese filtro el beneficio se fuga hacia quienes no eran el grupo objetivo.",type:"CC"},
-{topic:"Diseño de políticas",unit:"Diapositivas Subsidios",syllabus:"Condicionalidad",scenario:"El cupón solo puede gastarse en el rubro que el Estado quiere fomentar.",question:"Un cupón solo puede usarse para comprar el bien que el gobierno quiere fomentar, y de ninguna otra forma. ¿Qué práctica de diseño representa?",options:["Condicionalidad, porque amarra el beneficio al rubro objetivo","Focalización, porque identifica el ingreso de cada hogar beneficiario","Una subvención ad valorem, porque se calcula en porcentaje del precio","Una suma fija, porque entrega el mismo monto a todos los hogares"],answer:0,explanation:"La condicionalidad asegura que el dinero se gaste en el rubro previsto; si el hogar puede usarlo en cualquier cosa, ese objetivo se pierde.",type:"CC"},
-{topic:"Diseño de políticas",unit:"Diapositivas Subsidios",syllabus:"Temporalidad",scenario:"El programa de apoyo nace con criterios de salida definidos.",question:"Un subsidio se diseña con fecha de revisión y condiciones para terminarse desde el primer día. ¿Qué busca lograr esa decisión?",options:["Aumentar el gasto fiscal porque el programa se renueva","Eliminar la sobreproducción del bien que se apoya siempre","Reducir la dependencia y no mantenerlo de más tiempo","Hacer que la demanda del bien se vuelva más elástica"],answer:2,explanation:"Revisar y terminar el apoyo con criterios claros evita que se vuelva permanente y que sostenga un gasto sin beneficio proporcional.",type:"CC"},
-{topic:"Alternativas",unit:"Diapositivas Subsidios",syllabus:"Transferencia en efectivo",scenario:"Se entrega dinero a los hogares en lugar de bajar el precio.",question:"¿Cuál es la ventaja principal de entregar una transferencia en efectivo a los hogares en lugar de subsidiar el precio del bien?",options:["Baja el costo marginal de producción y desplaza la oferta","Desplaza la curva de demanda hacia arriba en el mercado","Genera sobreproducción del bien como cualquier subvención","Reparte ingreso sin alterar el precio relativo del bien"],answer:3,explanation:"Al no tocar el precio del bien, la transferencia no distorsiona las decisiones de compra ni provoca sobreproducción, y llega dinero a quien fue elegido.",type:"CC"},
-{topic:"Alternativas",unit:"Diapositivas Subsidios",syllabus:"Créditos tributarios",scenario:"El Estado otorga ayuda vía el sistema tributario.",question:"En lugar de pagar en dinero, el Estado permite descontar impuestos a quienes inviertan en el rubro apoyado. ¿En qué consiste esa ayuda?",options:["El Estado entrega siempre el mismo monto por cada unidad producida","El Estado deja de recaudar impuestos en vez de pagar en efectivo","El consumidor recibe un cupón para gastarlo solo en el rubro fijado","El gobierno asume directamente el costo de importar el bien"],answer:1,explanation:"Es ayuda indirecta: el gobierno cobra menos impuestos en vez de girar dinero, así que el costo aparece como menor recaudación y no como gasto.",type:"CC"},
-{topic:"Alternativas",unit:"Diapositivas Subsidios",syllabus:"Provisión pública",scenario:"El Estado construye y opera el servicio en lugar de subsidiarlo.",question:"En vez de subsidiar consultas en clínicas privadas, el Estado construye y opera su propio centro de salud. ¿Qué alternativa se está usando?",options:["El Estado produce y opera el servicio en vez de subsidiar su precio","El Estado fija un precio máximo y sanciona a los vendedores privados","El Estado entrega una transferencia fija a cada prestador privado","El Estado financia el precio con una ayuda por unidad vendida"],answer:0,explanation:"La provisión pública directa hace que el Estado sea el productor del servicio, evitando el gasto en subvenciones al precio de otros operadores.",type:"CC"},
-{topic:"Bienestar",unit:"Diapositivas Subsidios",syllabus:"Equidad y eficiencia",scenario:"Se hace la evaluación integral de una subvención.",question:"Al cerrar la evaluación de una subvención, ¿qué balance describe mejor el resultado habitual?",options:["Pierden los dos agentes porque el precio de mercado se derrumba","Gana el presupuesto porque la mayor cantidad recauda más impuestos","Ganan consumidor y productor, pero el gasto público los supera","Ganan los consumidores y pierden los productores en todo el rango"],answer:2,explanation:"Los dos excedentes suben, pero el rectángulo del gasto del gobierno es mayor que esas ganancias y deja una pérdida de eficiencia.",type:"CC"},
+  {
+    id: 1,
+    topic_tag: 'impuestos_indirectos',
+    question: '¿Qué tipo de impuesto se aplicó a los televisores de 50 pulgadas en Ecuador según la noticia?',
+    options: [
+      'Un impuesto fijo del 10 por ciento sobre el precio del producto.',
+      'Un impuesto específico de 50 dólares por cada unidad vendida en el país.',
+      'Un impuesto progresivo que grava la renta de los vendedores minoristas.',
+      'Un impuesto sobre las ganancias de capital de los importadores extranjeros.'
+    ],
+    correct: 0,
+    explanation: 'La noticia indica que se aplicó un impuesto fijo del 10 por ciento sobre los televisores de 50 pulgadas.'
+  },
+  {
+    id: 2,
+    topic_tag: 'precio_consumidor_productor',
+    question: 'Antes de la aplicación del impuesto, ¿cuál era el precio promedio de un televisor de 50 pulgadas en tiendas minoristas?',
+    options: [
+      'Quinientos dólares estadounidenses.',
+      'Cuatrocientos cincuenta dólares estadounidenses en la mayoría de las tiendas.',
+      'Quinientos cincuenta dólares estadounidenses en las tiendas más grandes.',
+      'Seiscientos dólares estadounidenses en las principales cadenas comerciales.'
+    ],
+    correct: 0,
+    explanation: 'El precio promedio antes del impuesto era de quinientos dólares estadounidenses.'
+  },
+  {
+    id: 3,
+    topic_tag: 'precio_consumidor_productor',
+    question: 'Tras la aplicación del impuesto fijo del 10 por ciento, ¿a cuánto subió el precio final del televisor de 50 pulgadas?',
+    options: [
+      'Quinientos cincuenta dólares estadounidenses.',
+      'Quinientos veinticinco dólares estadounidenses en algunas tiendas locales.',
+      'Quinientos setenta y cinco dólares estadounidenses en las grandes cadenas.',
+      'Seiscientos dólares estadounidenses en la mayoría de los establecimientos.'
+    ],
+    correct: 0,
+    explanation: 'Con el impuesto, el precio subió a quinientos cincuenta dólares estadounidenses.'
+  },
+  {
+    id: 4,
+    topic_tag: 'incidencia_impuesto',
+    question: '¿A cuánto ascendió el aumento de precio directamente atribuible al impuesto?',
+    options: [
+      'Cincuenta dólares estadounidenses.',
+      'Veinticinco dólares estadounidenses por cada unidad comercializada.',
+      'Cien dólares estadounidenses sobre el precio original de venta.',
+      'Diez dólares estadounidenses adicionales por cada televisor vendido.'
+    ],
+    correct: 0,
+    explanation: 'El aumento fue de cincuenta dólares estadounidenses, equivalente al 10 por ciento sobre quinientos dólares.'
+  },
+  {
+    id: 5,
+    topic_tag: 'incidencia_impuesto',
+    question: 'Según la noticia, ¿quién suele absorber, en la práctica, la mayor parte del aumento de precio cuando se aplica este tipo de impuesto?',
+    options: [
+      'El consumidor final.',
+      'El gobierno central a través de sus entidades recaudadoras.',
+      'Los importadores mayoristas que traen el producto al país.',
+      'Las empresas de transporte encargadas de la distribución.'
+    ],
+    correct: 0,
+    explanation: 'Aunque el impuesto se recauda a través de los comerciantes, el aumento suele trasladarse al consumidor final.'
+  },
+  {
+    id: 6,
+    topic_tag: 'excedentes',
+    question: 'Cuando parte del impuesto es asumida por los vendedores, esto implica una reducción en:',
+    options: [
+      'Sus márgenes de ganancia.',
+      'Sus costos fijos totales para mantener el negocio abierto.',
+      'La cantidad total de impuestos que deben pagar al fisco.',
+      'La elasticidad de su oferta frente a cambios de precio.'
+    ],
+    correct: 0,
+    explanation: 'Algunos vendedores asumieron una pequeña porción del costo, reduciendo sus márgenes de ganancia para mantener la competitividad.'
+  },
+  {
+    id: 7,
+    topic_tag: 'elasticidad_demanda',
+    question: '¿Cómo describe la noticia la sensibilidad al precio del mercado de televisores de 50 pulgadas en Ecuador?',
+    options: [
+      'Alta sensibilidad al precio.',
+      'Baja sensibilidad al precio entre los consumidores locales.',
+      'Sensibilidad al precio casi nula en este segmento de mercado.',
+      'Sensibilidad al precio completamente inelástica para este producto.'
+    ],
+    correct: 0,
+    explanation: 'El mercado se caracteriza por su alta sensibilidad al precio.'
+  },
+  {
+    id: 8,
+    topic_tag: 'cantidad_transada',
+    question: '¿En qué porcentaje disminuyeron las ventas de televisores de 50 pulgadas durante las primeras semanas tras la aplicación del impuesto?',
+    options: [
+      'Doce por ciento.',
+      'Cinco por ciento según las estimaciones preliminares.',
+      'Veinticinco por ciento según los datos de las asociaciones.',
+      'Tres por ciento de acuerdo con los registros comerciales.'
+    ],
+    correct: 0,
+    explanation: 'Las ventas disminuyeron en un doce por ciento durante las primeras semanas.'
+  },
+  {
+    id: 9,
+    topic_tag: 'efecto_demanda',
+    question: '¿Qué comportamiento adoptaron muchos consumidores ante el encarecimiento del producto?',
+    options: [
+      'Postergaron su compra o buscaron opciones más económicas.',
+      'Aumentaron sus compras para aprovechar el precio actual.',
+      'Compraron mayores cantidades para distribuir el costo entre varios meses.',
+      'No modificaron en absoluto su decisión de compra habitual.'
+    ],
+    correct: 0,
+    explanation: 'Muchos consumidores prefirieron postergar su compra o buscar opciones más económicas, como televisores más pequeños o reacondicionados.'
+  },
+  {
+    id: 10,
+    topic_tag: 'efecto_demanda',
+    question: '¿Qué alternativa de compra mencionó la noticia para evitar el impuesto local?',
+    options: [
+      'Comprar televisores en plataformas internacionales.',
+      'Comprar únicamente a mayoristas nacionales con descuento.',
+      'Adquirir televisores usados dentro del territorio nacional.',
+      'Esperar a que el gobierno subsidie directamente el producto.'
+    ],
+    correct: 0,
+    explanation: 'Algunos consumidores optaron por comprar televisores en plataformas internacionales, aprovechando precios más bajos y esquivando el impuesto local.'
+  },
+  {
+    id: 11,
+    topic_tag: 'impuestos_indirectos',
+    question: '¿Qué objetivo buscaba el gobierno ecuatoriano al aplicar este impuesto fijo?',
+    options: [
+      'Aumentar la recaudación fiscal.',
+      'Reducir la inflación general de la economía.',
+      'Proteger a los productores nacionales de la competencia extranjera.',
+      'Subvencionar el consumo de electrodomésticos en el mercado interno.'
+    ],
+    correct: 0,
+    explanation: 'El gravamen buscaba aumentar la recaudación fiscal.'
+  },
+  {
+    id: 12,
+    topic_tag: 'incidencia_impuesto',
+    question: 'En términos de incidencia del impuesto, cuando la demanda es relativamente elástica, ¿quién tiende a soportar una menor proporción del impuesto?',
+    options: [
+      'Los consumidores.',
+      'Los productores.',
+      'El gobierno central.',
+      'Los bancos comerciales.'
+    ],
+    correct: 0,
+    explanation: 'Cuando la demanda es relativamente elástica, los productores tienden a soportar una mayor proporción del impuesto y los consumidores una menor proporción.'
+  },
+  {
+    id: 13,
+    topic_tag: 'tax_wedge',
+    question: 'El concepto de "tax wedge" (cuña fiscal) hace referencia a:',
+    options: [
+      'La diferencia entre el precio pagado por el consumidor y el precio recibido por el productor tras el impuesto.',
+      'La diferencia entre el costo de producción y el precio de venta antes del impuesto.',
+      'La diferencia entre el precio de importación y el precio minorista en el mercado.',
+      'La diferencia entre los ingresos brutos y los costos variables de producción.'
+    ],
+    correct: 0,
+    explanation: 'La cuña fiscal es la brecha entre el precio que paga el consumidor y el precio que recibe el productor después de aplicarse el impuesto.'
+  },
+  {
+    id: 14,
+    topic_tag: 'ingreso_fiscal',
+    question: 'El ingreso fiscal generado por un impuesto sobre un bien se calcula como:',
+    options: [
+      'El monto del impuesto por unidad multiplicado por la cantidad transada tras el impuesto.',
+      'El precio final multiplicado por la cantidad original vendida en el mercado.',
+      'El aumento de precio multiplicado por todas las unidades producidas inicialmente.',
+      'La pérdida de excedente multiplicada por el tipo impositivo aplicado.'
+    ],
+    correct: 0,
+    explanation: 'El ingreso fiscal es igual al tipo impositivo por unidad multiplicado por la nueva cantidad transada en el mercado.'
+  },
+  {
+    id: 15,
+    topic_tag: 'dwl',
+    question: 'La pérdida irrecuperable de eficiencia (pérdida de peso muerto) causada por un impuesto representa:',
+    options: [
+      'Transacciones mutuamente beneficiosas que ya no se realizan en el mercado.',
+      'Un aumento en el bienestar total de consumidores y productores.',
+      'Un ahorro de recursos para el gobierno central.',
+      'Un incremento en la producción total del bien gravado.'
+    ],
+    correct: 0,
+    explanation: 'La pérdida irrecuperable de eficiencia corresponde a las transacciones que habrían sido beneficiosas para ambas partes, pero que dejan de realizarse debido al impuesto.'
+  },
+  {
+    id: 16,
+    topic_tag: 'excedente_consumidor',
+    question: 'La aplicación de un impuesto indirecto sobre un bien tiende a:',
+    options: [
+      'Disminuir el excedente del consumidor.',
+      'Aumentar el excedente del consumidor.',
+      'Mantener el excedente del consumidor sin cambios significativos.',
+      'Eliminar completamente el excedente del productor en el mercado.'
+    ],
+    correct: 0,
+    explanation: 'El impuesto eleva el precio pagado por el consumidor, lo que reduce su excedente.'
+  },
+  {
+    id: 17,
+    topic_tag: 'excedente_productor',
+    question: '¿Qué efecto tiene un impuesto indirecto sobre el excedente del productor?',
+    options: [
+      'Disminuye, ya que recibe un precio menor por cada unidad vendida.',
+      'Aumenta, porque vende menos unidades a mayor precio.',
+      'Permanece exactamente igual al equilibrio inicial del mercado.',
+      'Se duplica debido a la recaudación fiscal del gobierno.'
+    ],
+    correct: 0,
+    explanation: 'El productor recibe un precio neto menor tras el impuesto, por lo que su excedente disminuye.'
+  },
+  {
+    id: 18,
+    topic_tag: 'incidencia_impuesto',
+    question: 'Si la demanda de un bien es muy elástica y la oferta relativamente inelástica, la incidencia del impuesto recaerá principalmente sobre:',
+    options: [
+      'Los productores.',
+      'Los consumidores.',
+      'Los consumidores y productores por partes exactamente iguales.',
+      'Únicamente sobre el gobierno central.'
+    ],
+    correct: 0,
+    explanation: 'Cuando la demanda es elástica, los consumidores pueden evitar el impuesto cambiando a sustitutos, por lo que los productores soportan mayor proporción.'
+  },
+  {
+    id: 19,
+    topic_tag: 'incidencia_impuesto',
+    question: 'Si la demanda de un bien es relativamente inelástica, la incidencia del impuesto tiende a recaer principalmente sobre:',
+    options: [
+      'Los consumidores.',
+      'Los productores.',
+      'Los importadores mayoristas que distribuyen el producto.',
+      'Los distribuidores encargados de la venta al por menor.'
+    ],
+    correct: 0,
+    explanation: 'Con demanda inelástica, los consumidores son menos sensibles al precio y soportan una mayor proporción del impuesto.'
+  },
+  {
+    id: 20,
+    topic_tag: 'impuestos_indirectos',
+    question: '¿Cuál es la principal diferencia entre un impuesto específico y un impuesto ad valorem?',
+    options: [
+      'El impuesto específico es una cantidad fija por unidad, mientras que el ad valorem es un porcentaje del precio.',
+      'El impuesto específico solo se aplica a importaciones, mientras que el ad valorem solo a bienes nacionales.',
+      'El impuesto específico varía con el precio, mientras que el ad valorem es fijo.',
+      'No existe ninguna diferencia entre ambos tipos de impuesto en la práctica.'
+    ],
+    correct: 0,
+    explanation: 'Un impuesto específico grava una cantidad monetaria fija por unidad; un impuesto ad valorem grava un porcentaje del precio del bien.'
+  }
 ];
 
 /* ═══════ DIAGRAMAS SVG (inline, modelos económicos) ═══════ */
